@@ -20,4 +20,5 @@ deploy:
   run: "python manage.py migrate"
   app:
     main: techbitsdata
-    dev: ecommerce
+    dev: techbitsdata-staging
+

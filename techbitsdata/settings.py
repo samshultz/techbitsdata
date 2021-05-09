@@ -7,7 +7,9 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Initialise environment variables
-env = environ.Env()
+env = environ.Env(
+    DEBUG=(bool, False)
+)
 environ.Env.read_env()
 
 
@@ -22,7 +24,8 @@ DEBUG = env('DEBUG')
 
 ALLOWED_HOSTS = [
                 'techbitsdata.com', 
-                'techbitsdata.herokuapp.com', 
+                'techbitsdata.herokuapp.com',
+                'techbitsdata-staging.herokuapp.com', 
                 'localhost', 
                 '127.0.0.1'
                 ]
