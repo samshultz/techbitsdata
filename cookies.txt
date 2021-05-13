@@ -1,0 +1,6 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+.webdesign-finder.com	TRUE	/	FALSE	1999999999	__cfduid	dc7070616bcdc9a2884b4d07909f44b781620629044
+webdesign-finder.com	TRUE	/	FALSE	1999999999	SameSite	Lax
+themetechmount.com	TRUE	/	FALSE	1999999999	yith_wcwl_session_dd1a45b532a7f9b24b530add7a7243da	%7B%22session_id%22%3A%2212379bc89e641b9fa18c9bc9b56a0d8c%22%2C%22session_expiration%22%3A1623225076%2C%22session_expiring%22%3A1623221476%2C%22cookie_hash%22%3A%22d36000b9add26dd1d74dacdd807c829e%22%7D
+

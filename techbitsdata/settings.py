@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'portfolio.apps.PortfolioConfig',
     'services.apps.ServicesConfig',
     'contact.apps.ContactConfig',
+    'core.apps.CoreConfig',
     
     'ckeditor',
     'ckeditor_uploader',
