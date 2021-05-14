@@ -1,0 +1,141 @@
+{% extends "base.html" %}
+{% load static %}
+{% block meta %}
+<meta property="og:site_name" content="Techbits Website Design" />
+<meta property="og:title" content="Case Studies | Techbits" />
+<meta property="og:description" content="Check out some of the latest web design projects we've launched. From global to local brands, we help tell your story with custom web design and web marketing." />
+<meta property="og:image:alt" content="Check out some of the latest web design projects we've launched. From global to local brands, we help tell your story with custom web design and web marketing." />
+<meta itemprop="name" content="Case Studies | Techbits">
+<meta itemprop="description" content="Check out some of the latest web design projects we've launched. From global to local brands, we help tell your story with custom web design and web marketing.">
+{% endblock meta %}
+
+{% block title %}
+Case Studies | Techbits
+{% endblock title %}
+{% block content %}
+<section id="interior-content" class="" data-page-id="1003">
+    <section data-block="288" data-type="amsd" data-profile="false" data-layout="vertical-list" data-table="strings" data-columns="2" class="amsd">
+        <div data-template="page-heading">
+            <div class="page-heading-wrapper no-content">
+                <div class="bg-color bg-color-light-grey">
+                </div>
+                <div class="page-heading-content">
+                    <div class="wrapper max-width">
+                        <div class="flexbox-row headings-wrapper">
+                            <div class="flexbox-col">
+                                <div class="heading heading-1 large-heading">Our Work</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+        </div>
+    </section>
+    <div class="clr"></div>
+    <div class="wrapper">
+        <div id="interior-content-blocks" tabindex="-1" data-tab-element="-1">
+            <section data-block="287" data-template="case-studies-list" data-type="amsd" data-profile="false" data-layout="custom" data-columns="2" class="amsd">
+                <div class="mobile-column-max-width">
+                    {% for project in projects %}
+                    {% if project.row == 'first-row' or project.row == 'next-row' %}
+                    <div class="flexbox-row">
+                        {% endif %}
+                        <div class="flexbox-col" data-size="{{ project.size }}" data-position="{{ project.position }}" data-theme="dark">
+                            <div class="case-study-padding">
+                                <div class="case-study {% cycle 'bg-color-sandy' 'bg-color-brownish-grey' 'bg-color-pale-olive-green' 'bg-color-light-grey-blue' 'bg-color-orange-red' 'bg-color-black' 'bg-color-brownish-grey' %}" data-case-study="1093">
+                                    <div class="heading-wrapper">
+                                        <div class="heading-content">
+                                            <div class="logo">
+                                                <img data-lazy-load data-src="{{ project.logo.url }}" alt="{{ project.name }}" />
+                                            </div>
+                                            <div class="heading heading-8 color-dark">{{ project.location }}</div>
+                                        </div>
+                                    </div>
+                                    <div class="device-screenshot">
+                                        <div class="device-screenshot-inner">
+                                            <div class="device-screenshot-screenshot" style="background-image: url('{{ project.images.first.image.url }}')"></div>
+                                            <div class="device-screenshot-ui"></div>
+                                            <div class="device-screenshot-url">{{ project.url }}</div>
+                                            <div class="device-screenshot-clock" data-live-time="desktop"></div>
+                                            <div class="device-screenshot-background"></div>
+                                            <div class="device-screenshot-background-fallback"></div>
+                                        </div>
+                                    </div>
+                                    <div class="overlay-wrapper">
+                                        <div class="overlay-inner">
+                                            <div class="overlay-heading">
+                                                <div class="heading heading-6">{{ project.name }}</div>
+                                                <div class="heading heading-8">{{ project.location }}</div>
+                                            </div>
+                                            <div class="overlay-button">
+                                                <a href="{{ project.url }}" class="cms-btn animated-button case-study-overlay-button-color-sandy">View This Project</a> </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        {% if project.column == 'second-column' %}
+                    </div>
+                    {% endif %}
+                    {% endfor %}
+
+                    <div class="case-studies-around-the-world">
+                        <section data-block="54" data-type="amsd" data-profile="false" data-layout="vertical-list" data-table="trusted_by" data-columns="2" class="amsd">
+                            <div data-type="marquee">
+                                <div class="heading">Trusted By</div>
+                                <ul>
+                                    <li>
+                                        <img data-src="https://d3dpix5tqb3tqh.cloudfront.net/image/38/500" alt="Kellogg's" />
+                                    </li>
+                                    <li>
+                                        <img data-src="https://d3dpix5tqb3tqh.cloudfront.net/image/43/500" alt="Chick-fil-a" />
+                                    </li>
+                                    <li>
+                                        <img data-src="https://d3dpix5tqb3tqh.cloudfront.net/image/40/500" alt="National Association of Realtors" />
+                                    </li>
+                                    <li>
+                                        <img data-src="https://d3dpix5tqb3tqh.cloudfront.net/image/413/500" alt="Viking" />
+                                    </li>
+                                    <li>
+                                        <img data-src="https://d3dpix5tqb3tqh.cloudfront.net/image/32/500" alt="ABC" />
+                                    </li>
+                                    <li>
+                                        <img data-src="https://d3dpix5tqb3tqh.cloudfront.net/image/39/500" alt="La Cornue" />
+                                    </li>
+                                    <li>
+                                        <img data-src="https://d3dpix5tqb3tqh.cloudfront.net/image/36/500" alt="Habitat for Humanity" />
+                                    </li>
+                                    <li>
+                                        <img data-src="https://d3dpix5tqb3tqh.cloudfront.net/image/37/500" alt="University of Illinois" />
+                                    </li>
+                                    <li>
+                                        <img data-src="https://d3dpix5tqb3tqh.cloudfront.net/image/415/500" alt="National Corn Growers Association" />
+                                    </li>
+                                    <li>
+                                        <img data-src="https://d3dpix5tqb3tqh.cloudfront.net/image/826/500" alt="Caterpillar" />
+                                    </li>
+                                    <li>
+                                        <img data-src="https://d3dpix5tqb3tqh.cloudfront.net/image/1937/500" alt="Beer Nuts" />
+                                    </li>
+                                </ul>
+                            </div>
+                        </section>
+                        <section data-block="54" data-template="testimonials">
+                            <div class="testimonial">
+                                <div class="testimonial-text">
+                                    <p>If you are looking for cutting-edge website design, search engine optimization, and the latest trends in electronic, web-based marketing, give these people a serious look. You won't be disappointed.</p>
+                                </div>
+                                <div class="testimonial-author heading-8">Gary York, Logicboard</div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</section>
+{% endblock content %}

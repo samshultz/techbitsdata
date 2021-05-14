@@ -1,519 +1,487 @@
 {% load static %}
+{% load service_tags %}
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-    <meta name="theme-color" content="#5c5c5c">
-    <title>{% block title %}Real Estate Web Design - TechBitsData{% endblock title %}</title>
-    <meta name="title" content="Real Estate Web Design - TechBitsData" />
-    <meta name="description" content="TechBitsData solutions is an industry leader in real estate web design. Fully custom real estate websites with database integration & property search. Contact us today." />
-    <meta name="keywords" content="" />
-    <meta name="author" content="Techbits Website Design" />
-    <meta property="og:site_name" content="TechBitsData Website Design" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Real Estate Web Design - TechBitsData" />
-    <meta property="og:description" content="TechBitsData is an industry leader in real estate web design. Fully custom real estate websites with database integration & property search. Contact us today." />
-    <meta itemprop="name" content="Real Estate Web Design - TechBitsData">
-    <meta itemprop="description" content="TechBitsData solutions is an industry leader in real estate web design. Fully custom real estate websites with database integration & property search. Contact us today.">
-    <style type="text/css">
-    #content-wrapper {
-        opacity: 0;
-        -webkit-transition: opacity 100ms cubic-bezier(0.4, 0, 1, 1);
-        -moz-transition: opacity 100ms cubic-bezier(0.4, 0, 1, 1);
-        -ms-transition: opacity 100ms cubic-bezier(0.4, 0, 1, 1);
-        -o-transition: opacity 100ms cubic-bezier(0.4, 0, 1, 1);
-        transition: opacity 100ms cubic-bezier(0.4, 0, 1, 1);
-    }
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+        <meta name="theme-color" content="#5c5c5c">
+        <title>{% block title %}Real Estate Web Design - TechBitsData{% endblock title %}</title>
+        <meta name="title" content="Real Estate Web Design - TechBitsData" />
+        <meta name="description" content="TechBitsData solutions is an industry leader in real estate web design. Fully custom real estate websites with database integration & property search. Contact us today." />
+        <meta name="keywords" content="" />
+        <meta name="author" content="Techbits Website Design" />
+        <meta property="og:site_name" content="TechBitsData Website Design" />
+        <meta property="og:type" content="website" />
+        {% block meta %}
+        <meta property="og:title" content="Real Estate Web Design - TechBitsData" />
+        <meta property="og:description" content="TechBitsData is an industry leader in real estate web design. Fully custom real estate websites with database integration & property search. Contact us today." />
+        <meta itemprop="name" content="Real Estate Web Design - TechBitsData">
+        <meta itemprop="description" content="TechBitsData solutions is an industry leader in real estate web design. Fully custom real estate websites with database integration & property search. Contact us today.">
 
-    html.loaded #content-wrapper {
-        opacity: 1;
-    }
-    </style>
-    <link rel="stylesheet" href="{% static 'core/css/cms-frontend-framework.css' %}" type="text/css" />
-    <link rel="stylesheet" href="{% static 'core/css/base.css' %}" type="text/css" />
-    <link rel="stylesheet" href="{% static 'core/css/vendor.css' %}" type="text/css" />
-    <script id="config-json" type="application/json">
-    { "is_testlink": false, "site_title": "Techbits Website Design", "popup_form_template_name": "lets-talk", "colors": { "black": "#161616", "bright-cyan": "#4dc1fb", "bright-light-blue": "#20feee", "bright-orange": "#f45b0f", "brown-grey": "#9b9b9b", "brownish-grey": "#5c5c5c", "carnation": "#ff7796", "cerulean": "#048ecb", "dark": "#0c0c0d", "dark-navy-blue": "#01002d", "dusty-orange": "#fe7820", "light-grey": "#e8e8e8", "light-grey-blue": "#94c0d4", "lightblue": "#74d1ff", "greyish-brown": "#434343", "mustard": "#dcb500", "orange-red": "#fe3120", "orangeish": "#fb8b4d", "pale-olive-green": "#a6e26c", "peach": "#ffc486", "purply-pink": "#fa77ff", "sandy": "#e2d182", "strong-pink": "#fe20a6", "sun-yellow": "#ffd726", "very-light-pink": "#d7d7d7", "even-lighter-pink": "#f0f0f0", "white": "#ffffff" }, "cookies": { "fingerprint": "fingerprint", "utm": "utm" }, "utm_parameters": ["utm_source", "utm_medium", "utm_campaign", "gclid", "fbclid"], "cloudfront_distribution_url": "d3dpix5tqb3tqh.cloudfront.net", "recaptcha_site_key": "6LcOk-QZAAAAADg_2j1DlXz0jjVhZ2nXGusp6BTk" }
-    </script>
-    <script id="page-json" type="application/json">
-    { "id": "1032", "parent": "1029", "title": "Real Estate", "slug": "real-estate-web-design", "type": "1", "tags": ["industry"], "googleAnalyticsCustomJS": null, "googleAnalyticsCustomHTML": null, "audienceBuilderConversionID": null, "sitemap": null, "draft": null, "comments": null, "testlink_only": null, "exclude_from_nav": null, "disable_caching": null, "pos": "78", "children": "0", "view": "inner", "uri": "industry-solutions\/real-estate-web-design", "blocks": [{ "id": "103", "parent": "1032", "title": "Custom Page Settings", "caption": null, "html": null, "type": "2", "pos": "0", "view": "amsd", "settings": { "AMSD Columns": "2", "AMSD Delete": "false", "AMSD Edit": "false", "Custom Page Settings": "true", "Heading Read Only": "true", "Hidden": "true", "Table": "amsd_strings" }, "additional_settings": [] }, { "id": "98", "parent": "1032", "title": "Page Heading", "caption": null, "html": null, "type": "2", "pos": "1", "view": "amsd", "settings": { "AMSD Config": "[\"key\", \"value\"]", "Break Wrapper": "true", "Heading Read Only": "true", "Table": "amsd_strings", "Template": "page-heading" }, "additional_settings": [] }, { "id": "100", "parent": "1032", "title": "Text (One Column) (w\/ Ordered List)", "caption": null, "html": null, "type": "2", "pos": "2", "view": "amsd", "settings": { "AMSD Config": "[\"key\", \"value\"]", "Heading Read Only": "true", "Table": "amsd_strings", "Template": "text-one-column" }, "additional_settings": [] }, { "id": "1275", "parent": "1032", "title": "Skinny Banner w\/ Text Overlay", "caption": null, "html": null, "type": "2", "pos": "3", "view": "amsd", "settings": { "AMSD Columns": "2", "AMSD Delete": "false", "AMSD Edit": "false", "Heading Read Only": "true", "Table": "amsd_strings", "Template": "skinny-banner-w-text-overlay" }, "additional_settings": [] }, { "id": "1285", "parent": "1032", "title": "Trusted By", "caption": null, "html": null, "type": "2", "pos": "4", "view": "amsd", "settings": { "Additional Settings": "true", "AMSD Noun": "logo", "Heading Read Only": "true", "Table": "amsd_trusted_by" }, "additional_settings": { "Type": "marquee", "Heading": "Trusted By", "Testimonial Text": "", "Testimonial Author": "" } }, { "id": "891", "parent": "1032", "title": "Full-Width Background w\/ Text Overlay", "caption": null, "html": null, "type": "2", "pos": "5", "view": "amsd", "settings": { "AMSD Columns": "2", "AMSD Delete": "false", "AMSD Edit": "false", "Heading Read Only": "true", "Table": "amsd_strings", "Template": "full-width-background-w-text-overlay" }, "additional_settings": [] }, { "id": "551", "parent": "1032", "title": "Feature Boxes w\/ Recessed Heading", "caption": null, "html": null, "type": "2", "pos": "6", "view": "amsd", "settings": { "Additional Settings": "true", "AMSD Config": "[\"title\",\"color\"]", "AMSD Noun": "feature box", "BodyClass": "block ul-li-checkbox", "Heading Read Only": "true", "Table": "amsd_feature_boxes" }, "additional_settings": { "Heading": " <h3> Drive Qualified<br>Real Estate Leads <\/h3>", "Content": "<p>Don&#39;t stop at a beautiful website. Let our web marketing team help drive leads to your property management or real estate website, through <a href=\"\/services\/web-marketing\/search-engine-optimization\">organic search optimization<\/a>, <a href=\"\/services\/web-marketing\/ppc-management\">pay-per-click ad management<\/a>, <a href=\"\/services\/web-marketing\/get-5-star-reviews\">review generation<\/a>.<\/p>\n" } }, { "id": "547", "parent": "1032", "title": "Card Stack (Full Image)", "caption": null, "html": null, "type": "2", "pos": "7", "view": "amsd", "settings": { "Additional Settings": "true", "AMSD Config": "[\"background_img\",\"title\",\"button\"]", "AMSD Noun": "card", "Heading Read Only": "true", "Table": "amsd_card_stack_full_image" }, "additional_settings": { "Heading": "See Our Work", "Heading Background Color": "bright-cyan", "Automatic Advance (Seconds)": "4" } }], "settings": { "Landing Page Preview Text": null }, "wildcards": [], "triggerType": "page", "trigger": null, "triggers": ["profile"], "triggersFound": [], "subcategories": [], "subcategories_with_value": [], "profile": false, "REQUEST_URI": "\/industry-solutions\/real-estate-web-design", "SEO": { "metaTitle": "Real Estate Web Design - Techbits", "metaDescription": "Techbits is an industry leader in real estate web design. Fully custom real estate websites with database integration & property search. Contact us today.", "metaKeywords": null, "metaImage": "1", "metaImageWidth": "64", "metaImageHeight": "64" }, "root": { "id": "1029", "parent": null, "title": "Industry Solutions", "slug": "industry-solutions", "type": "1", "tags": "industries", "googleAnalyticsCustomJS": null, "googleAnalyticsCustomHTML": null, "audienceBuilderConversionID": null, "sitemap": null, "draft": null, "comments": null, "testlink_only": null, "exclude_from_nav": null, "disable_caching": null, "pos": "4", "children": "10", "view": "inner", "blocks": [{ "id": "259", "parent": "1029", "title": "Custom Page Settings", "caption": null, "html": null, "type": "2", "pos": "0", "view": "amsd", "settings": { "AMSD Columns": "2", "AMSD Delete": "false", "AMSD Edit": "false", "Custom Page Settings": "true", "Heading Read Only": "true", "Hidden": "true", "Table": "amsd_strings" }, "additional_settings": [] }, { "id": "260", "parent": "1029", "title": "Page Heading", "caption": null, "html": null, "type": "2", "pos": "1", "view": "amsd", "settings": { "AMSD Config": "[\"key\", \"value\"]", "Break Wrapper": "true", "Heading Read Only": "true", "Table": "amsd_strings", "Template": "page-heading" }, "additional_settings": [] }, { "id": "262", "parent": "1029", "title": "Industries List", "caption": null, "html": null, "type": "4", "pos": "2", "view": "form", "settings": { "AMSD Grid Columns": "2", "Form Template": "industries-list", "Heading Read Only": "true" }, "additional_settings": [] }], "settings": { "Footer Industries": null, "Sub Nav Columns": "3", "Sub Nav Preview Theme": "secondary", "Sub Nav Preview Text": "<p>See how our custom web design solutions have helped thousands of businesses grow across varying industries.<\/p>\n", "Sub Nav Preview Button": { "text": "See All", "url": "\/industry-solutions" } } } }
-    </script>
+        {% endblock meta %}
+        <style type="text/css">
+        #content-wrapper {
+            opacity: 0;
+            -webkit-transition: opacity 100ms cubic-bezier(0.4, 0, 1, 1);
+            -moz-transition: opacity 100ms cubic-bezier(0.4, 0, 1, 1);
+            -ms-transition: opacity 100ms cubic-bezier(0.4, 0, 1, 1);
+            -o-transition: opacity 100ms cubic-bezier(0.4, 0, 1, 1);
+            transition: opacity 100ms cubic-bezier(0.4, 0, 1, 1);
+        }
 
-<body>
-    <div id="loading">
-        <div class="logo">
-            <div class="mask"><img src="https://d3dpix5tqb3tqh.cloudfront.net/assets/img/techbits-logo-mask.png" alt="Techbits Logo" /></div>
-            <div class="background bg-color-dark animate"></div>
+        html.loaded #content-wrapper {
+            opacity: 1;
+        }
+        </style>
+        <link rel="stylesheet" href="{% static 'core/css/cms-frontend-framework.css' %}" type="text/css" />
+        <link rel="stylesheet" href="{% static 'core/css/base.css' %}" type="text/css" />
+        <link rel="stylesheet" href="{% static 'core/css/vendor.css' %}" type="text/css" />
+        <script id="config-json" type="application/json">
+        { "is_testlink": false, "site_title": "Techbits Website Design", "popup_form_template_name": "lets-talk", "colors": { "black": "#161616", "bright-cyan": "#4dc1fb", "bright-light-blue": "#20feee", "bright-orange": "#f45b0f", "brown-grey": "#9b9b9b", "brownish-grey": "#5c5c5c", "carnation": "#ff7796", "cerulean": "#048ecb", "dark": "#0c0c0d", "dark-navy-blue": "#01002d", "dusty-orange": "#fe7820", "light-grey": "#e8e8e8", "light-grey-blue": "#94c0d4", "lightblue": "#74d1ff", "greyish-brown": "#434343", "mustard": "#dcb500", "orange-red": "#fe3120", "orangeish": "#fb8b4d", "pale-olive-green": "#a6e26c", "peach": "#ffc486", "purply-pink": "#fa77ff", "sandy": "#e2d182", "strong-pink": "#fe20a6", "sun-yellow": "#ffd726", "very-light-pink": "#d7d7d7", "even-lighter-pink": "#f0f0f0", "white": "#ffffff" }, "cookies": { "fingerprint": "fingerprint", "utm": "utm" }, "utm_parameters": ["utm_source", "utm_medium", "utm_campaign", "gclid", "fbclid"], "cloudfront_distribution_url": "d3dpix5tqb3tqh.cloudfront.net", "recaptcha_site_key": "6LcOk-QZAAAAADg_2j1DlXz0jjVhZ2nXGusp6BTk" }
+        </script>
+        <script id="page-json" type="application/json">
+        { "id": "1032", "parent": "1029", "title": "Real Estate", "slug": "real-estate-web-design", "type": "1", "tags": ["industry"], "googleAnalyticsCustomJS": null, "googleAnalyticsCustomHTML": null, "audienceBuilderConversionID": null, "sitemap": null, "draft": null, "comments": null, "testlink_only": null, "exclude_from_nav": null, "disable_caching": null, "pos": "78", "children": "0", "view": "inner", "uri": "industry-solutions\/real-estate-web-design", "blocks": [{ "id": "103", "parent": "1032", "title": "Custom Page Settings", "caption": null, "html": null, "type": "2", "pos": "0", "view": "amsd", "settings": { "AMSD Columns": "2", "AMSD Delete": "false", "AMSD Edit": "false", "Custom Page Settings": "true", "Heading Read Only": "true", "Hidden": "true", "Table": "amsd_strings" }, "additional_settings": [] }, { "id": "98", "parent": "1032", "title": "Page Heading", "caption": null, "html": null, "type": "2", "pos": "1", "view": "amsd", "settings": { "AMSD Config": "[\"key\", \"value\"]", "Break Wrapper": "true", "Heading Read Only": "true", "Table": "amsd_strings", "Template": "page-heading" }, "additional_settings": [] }, { "id": "100", "parent": "1032", "title": "Text (One Column) (w\/ Ordered List)", "caption": null, "html": null, "type": "2", "pos": "2", "view": "amsd", "settings": { "AMSD Config": "[\"key\", \"value\"]", "Heading Read Only": "true", "Table": "amsd_strings", "Template": "text-one-column" }, "additional_settings": [] }, { "id": "1275", "parent": "1032", "title": "Skinny Banner w\/ Text Overlay", "caption": null, "html": null, "type": "2", "pos": "3", "view": "amsd", "settings": { "AMSD Columns": "2", "AMSD Delete": "false", "AMSD Edit": "false", "Heading Read Only": "true", "Table": "amsd_strings", "Template": "skinny-banner-w-text-overlay" }, "additional_settings": [] }, { "id": "1285", "parent": "1032", "title": "Trusted By", "caption": null, "html": null, "type": "2", "pos": "4", "view": "amsd", "settings": { "Additional Settings": "true", "AMSD Noun": "logo", "Heading Read Only": "true", "Table": "amsd_trusted_by" }, "additional_settings": { "Type": "marquee", "Heading": "Trusted By", "Testimonial Text": "", "Testimonial Author": "" } }, { "id": "891", "parent": "1032", "title": "Full-Width Background w\/ Text Overlay", "caption": null, "html": null, "type": "2", "pos": "5", "view": "amsd", "settings": { "AMSD Columns": "2", "AMSD Delete": "false", "AMSD Edit": "false", "Heading Read Only": "true", "Table": "amsd_strings", "Template": "full-width-background-w-text-overlay" }, "additional_settings": [] }, { "id": "551", "parent": "1032", "title": "Feature Boxes w\/ Recessed Heading", "caption": null, "html": null, "type": "2", "pos": "6", "view": "amsd", "settings": { "Additional Settings": "true", "AMSD Config": "[\"title\",\"color\"]", "AMSD Noun": "feature box", "BodyClass": "block ul-li-checkbox", "Heading Read Only": "true", "Table": "amsd_feature_boxes" }, "additional_settings": { "Heading": " <h3> Drive Qualified<br>Real Estate Leads <\/h3>", "Content": "<p>Don&#39;t stop at a beautiful website. Let our web marketing team help drive leads to your property management or real estate website, through <a href=\"\/services\/web-marketing\/search-engine-optimization\">organic search optimization<\/a>, <a href=\"\/services\/web-marketing\/ppc-management\">pay-per-click ad management<\/a>, <a href=\"\/services\/web-marketing\/get-5-star-reviews\">review generation<\/a>.<\/p>\n" } }, { "id": "547", "parent": "1032", "title": "Card Stack (Full Image)", "caption": null, "html": null, "type": "2", "pos": "7", "view": "amsd", "settings": { "Additional Settings": "true", "AMSD Config": "[\"background_img\",\"title\",\"button\"]", "AMSD Noun": "card", "Heading Read Only": "true", "Table": "amsd_card_stack_full_image" }, "additional_settings": { "Heading": "See Our Work", "Heading Background Color": "bright-cyan", "Automatic Advance (Seconds)": "4" } }], "settings": { "Landing Page Preview Text": null }, "wildcards": [], "triggerType": "page", "trigger": null, "triggers": ["profile"], "triggersFound": [], "subcategories": [], "subcategories_with_value": [], "profile": false, "REQUEST_URI": "\/industry-solutions\/real-estate-web-design", "SEO": { "metaTitle": "Real Estate Web Design - Techbits", "metaDescription": "Techbits is an industry leader in real estate web design. Fully custom real estate websites with database integration & property search. Contact us today.", "metaKeywords": null, "metaImage": "1", "metaImageWidth": "64", "metaImageHeight": "64" }, "root": { "id": "1029", "parent": null, "title": "Industry Solutions", "slug": "industry-solutions", "type": "1", "tags": "industries", "googleAnalyticsCustomJS": null, "googleAnalyticsCustomHTML": null, "audienceBuilderConversionID": null, "sitemap": null, "draft": null, "comments": null, "testlink_only": null, "exclude_from_nav": null, "disable_caching": null, "pos": "4", "children": "10", "view": "inner", "blocks": [{ "id": "259", "parent": "1029", "title": "Custom Page Settings", "caption": null, "html": null, "type": "2", "pos": "0", "view": "amsd", "settings": { "AMSD Columns": "2", "AMSD Delete": "false", "AMSD Edit": "false", "Custom Page Settings": "true", "Heading Read Only": "true", "Hidden": "true", "Table": "amsd_strings" }, "additional_settings": [] }, { "id": "260", "parent": "1029", "title": "Page Heading", "caption": null, "html": null, "type": "2", "pos": "1", "view": "amsd", "settings": { "AMSD Config": "[\"key\", \"value\"]", "Break Wrapper": "true", "Heading Read Only": "true", "Table": "amsd_strings", "Template": "page-heading" }, "additional_settings": [] }, { "id": "262", "parent": "1029", "title": "Industries List", "caption": null, "html": null, "type": "4", "pos": "2", "view": "form", "settings": { "AMSD Grid Columns": "2", "Form Template": "industries-list", "Heading Read Only": "true" }, "additional_settings": [] }], "settings": { "Footer Industries": null, "Sub Nav Columns": "3", "Sub Nav Preview Theme": "secondary", "Sub Nav Preview Text": "<p>See how our custom web design solutions have helped thousands of businesses grow across varying industries.<\/p>\n", "Sub Nav Preview Button": { "text": "See All", "url": "\/industry-solutions" } } } }
+        </script>
+
+    <body>
+        <div id="loading">
+            <div class="logo">
+                <div class="mask"><img src="https://d3dpix5tqb3tqh.cloudfront.net/assets/img/techbits-logo-mask.png" alt="Techbits Logo" /></div>
+                <div class="background bg-color-dark animate"></div>
+            </div>
+            <div id="loading-message"></div>
         </div>
-        <div id="loading-message"></div>
-    </div>
-    <section class="content-wrapper">
-        <header>
-            <script type="text/javascript" src="{% static ' core/js/base.js' %}"></script>
-            <div class="scroll-backdrop"></div>
-            <section id="main-navigation" data-module="navigation" data-template="basic" class=" disable-text-select hamburger-right has-logo logo-left">
-                <div class="nav-gradient"></div>
-                <section id="mobile-nav-bar" class="mobile-only">
-                    <div id="mobile-nav-logo">
-                        <a href="{% url 'index' %}"><svg xmlns="http://www.w3.org/2000/svg" width="196" height="23" viewBox="0 0 196 23">
-                                <path fill="#9B9B9B" fill-rule="evenodd" d="M7.207 20.128c.001 1.542-1.238 2.81-2.808 2.872h-1.45a2.953 2.953 0 0 1-2.084-.833A2.846 2.846 0 0 1 0 20.127V2.873c.006-.761.32-1.49.873-2.024A2.954 2.954 0 0 1 2.948.023H4.4c1.575.05 2.821 1.325 2.808 2.872v3.447c.063.494-.187.977-.632 1.218l-1.685.85V3.263c0-.685-.565-1.24-1.263-1.24s-1.264.555-1.264 1.24v16.451c0 .685.566 1.24 1.264 1.24.698 0 1.263-.555 1.263-1.24v-3.033a1.302 1.302 0 0 1 .632-1.263l1.708-.736-.023 5.446zm16.356-6.732v9.374h-1.661a.722.722 0 0 1-.702-.574v-8.8L18.368.23h1.662c.42.024.75.367.748.781l1.591 8.524 1.498-8.524c0-.215.09-.421.25-.57a.804.804 0 0 1 .592-.211h1.732l-2.878 13.166zm21.223-.046v6.548c-.026 1.568-1.328 2.826-2.925 2.826h-4.259V.23h4.259c1.597 0 2.9 1.258 2.925 2.826v6.617a1.933 1.933 0 0 1-1.334 1.838 1.933 1.933 0 0 1 1.334 1.839zm-2.364-9.536a1.07 1.07 0 0 0-.334-.853 1.112 1.112 0 0 0-.882-.296h-1.287v7.79h1.287c.631 0 1.216-.3 1.216-1.31v-5.33zm0 10.133c0-.988-.585-1.287-1.216-1.287h-1.287v7.927h1.287c.33.029.657-.088.892-.319.235-.23.353-.55.324-.876v-5.445zm23.072 6.548c-.257.575-.655 1.47-.749 1.678-.27.435-.771.676-1.287.62h-5.241V.873a.72.72 0 0 1 .725-.643h6.13l-.795 1.677a1.27 1.27 0 0 1-1.24.644h-1.895a.544.544 0 0 0-.405.154.523.523 0 0 0-.157.397v6.686h3.533c-.257.575-.655 1.517-.748 1.7-.254.428-.74.67-1.24.62h-.983a.58.58 0 0 0-.562.552v7.812l4.914.023zm17.362 2.275c-.562 0-.655-.322-.679-.482l-1.614-9.628h-1.31v10.11h-2.34V.23h3.954c1.624-.026 2.968 1.232 3.019 2.826v5.836a3.846 3.846 0 0 1-1.217 3.079l1.825 10.776-1.638.023zm-2.34-12.27a1.231 1.231 0 0 0 1.217-1.102V3.493a1.231 1.231 0 0 0-1.217-1.103h-1.24v8.11h1.24zm23.423 12.27h-1.077c-.835.013-1.53-.628-1.568-1.447l-2.527-11.144V22.77h-2.34V.23h1.077c1.31 0 1.544.62 1.661 1.264l2.34 11.718V.23h2.34l.094 22.54zm19.889 0h-2.598l-2.059-15.51-2.059 15.51h-2.597L117.978.23h1.287c.983 0 1.146.62 1.24 1.218l3.323 21.322zm18.11-2.642c-.012 1.514-1.266 2.734-2.807 2.734h-1.802a2.86 2.86 0 0 1-2.054-.773 2.757 2.757 0 0 1-.87-1.984V.873a.696.696 0 0 1 .678-.643h1.661v19.484c-.006.321.12.63.348.86.229.229.542.358.869.358h.35a1.23 1.23 0 0 0 1.24-1.218V.23h2.34l.048 19.898zm19.726-18.22a1.247 1.247 0 0 1-1.24.62h-1.825a.604.604 0 0 0-.585.551V22.77h-1.662c-.561 0-.655-.322-.655-.482V2.528h-3.346V.942c0-.393.325-.712.726-.712h9.36l-.773 1.677zm12.8-1.678c.251-.02.5.067.683.238.183.17.283.41.276.658v21.621h-1.662c-.561 0-.655-.322-.678-.482V.23h1.38zm21.433 19.898c.004 1.509-1.182 2.763-2.715 2.872h-1.45a2.953 2.953 0 0 1-2.084-.833 2.846 2.846 0 0 1-.865-2.04V2.873c0-.765.312-1.5.865-2.039A2.953 2.953 0 0 1 191.732 0h1.45c1.575.05 2.822 1.325 2.808 2.872V6.32c.063.494-.187.977-.631 1.218l-1.779.873V3.263c0-.685-.565-1.24-1.263-1.24s-1.264.555-1.264 1.24v16.451c0 .685.566 1.24 1.264 1.24.698 0 1.263-.555 1.263-1.24v-3.033a1.302 1.302 0 0 1 .632-1.263l1.708-.736-.023 5.446z" />
-                            </svg>
-                        </a>
+        <section class="content-wrapper">
+            <header>
+                <script type="text/javascript" src="{% static 'core/js/base.js' %}"></script>
+                <div class="scroll-backdrop"></div>
+                <section id="main-navigation" data-module="navigation" data-template="basic" class=" disable-text-select hamburger-right has-logo logo-left">
+                    <div class="nav-gradient"></div>
+                    <section id="mobile-nav-bar" class="mobile-only">
+                        <div id="mobile-nav-logo">
+                            <a href="{% url 'index' %}"><svg xmlns="http://www.w3.org/2000/svg" width="196" height="23" viewBox="0 0 196 23">
+                                    <path fill="#9B9B9B" fill-rule="evenodd" d="M7.207 20.128c.001 1.542-1.238 2.81-2.808 2.872h-1.45a2.953 2.953 0 0 1-2.084-.833A2.846 2.846 0 0 1 0 20.127V2.873c.006-.761.32-1.49.873-2.024A2.954 2.954 0 0 1 2.948.023H4.4c1.575.05 2.821 1.325 2.808 2.872v3.447c.063.494-.187.977-.632 1.218l-1.685.85V3.263c0-.685-.565-1.24-1.263-1.24s-1.264.555-1.264 1.24v16.451c0 .685.566 1.24 1.264 1.24.698 0 1.263-.555 1.263-1.24v-3.033a1.302 1.302 0 0 1 .632-1.263l1.708-.736-.023 5.446zm16.356-6.732v9.374h-1.661a.722.722 0 0 1-.702-.574v-8.8L18.368.23h1.662c.42.024.75.367.748.781l1.591 8.524 1.498-8.524c0-.215.09-.421.25-.57a.804.804 0 0 1 .592-.211h1.732l-2.878 13.166zm21.223-.046v6.548c-.026 1.568-1.328 2.826-2.925 2.826h-4.259V.23h4.259c1.597 0 2.9 1.258 2.925 2.826v6.617a1.933 1.933 0 0 1-1.334 1.838 1.933 1.933 0 0 1 1.334 1.839zm-2.364-9.536a1.07 1.07 0 0 0-.334-.853 1.112 1.112 0 0 0-.882-.296h-1.287v7.79h1.287c.631 0 1.216-.3 1.216-1.31v-5.33zm0 10.133c0-.988-.585-1.287-1.216-1.287h-1.287v7.927h1.287c.33.029.657-.088.892-.319.235-.23.353-.55.324-.876v-5.445zm23.072 6.548c-.257.575-.655 1.47-.749 1.678-.27.435-.771.676-1.287.62h-5.241V.873a.72.72 0 0 1 .725-.643h6.13l-.795 1.677a1.27 1.27 0 0 1-1.24.644h-1.895a.544.544 0 0 0-.405.154.523.523 0 0 0-.157.397v6.686h3.533c-.257.575-.655 1.517-.748 1.7-.254.428-.74.67-1.24.62h-.983a.58.58 0 0 0-.562.552v7.812l4.914.023zm17.362 2.275c-.562 0-.655-.322-.679-.482l-1.614-9.628h-1.31v10.11h-2.34V.23h3.954c1.624-.026 2.968 1.232 3.019 2.826v5.836a3.846 3.846 0 0 1-1.217 3.079l1.825 10.776-1.638.023zm-2.34-12.27a1.231 1.231 0 0 0 1.217-1.102V3.493a1.231 1.231 0 0 0-1.217-1.103h-1.24v8.11h1.24zm23.423 12.27h-1.077c-.835.013-1.53-.628-1.568-1.447l-2.527-11.144V22.77h-2.34V.23h1.077c1.31 0 1.544.62 1.661 1.264l2.34 11.718V.23h2.34l.094 22.54zm19.889 0h-2.598l-2.059-15.51-2.059 15.51h-2.597L117.978.23h1.287c.983 0 1.146.62 1.24 1.218l3.323 21.322zm18.11-2.642c-.012 1.514-1.266 2.734-2.807 2.734h-1.802a2.86 2.86 0 0 1-2.054-.773 2.757 2.757 0 0 1-.87-1.984V.873a.696.696 0 0 1 .678-.643h1.661v19.484c-.006.321.12.63.348.86.229.229.542.358.869.358h.35a1.23 1.23 0 0 0 1.24-1.218V.23h2.34l.048 19.898zm19.726-18.22a1.247 1.247 0 0 1-1.24.62h-1.825a.604.604 0 0 0-.585.551V22.77h-1.662c-.561 0-.655-.322-.655-.482V2.528h-3.346V.942c0-.393.325-.712.726-.712h9.36l-.773 1.677zm12.8-1.678c.251-.02.5.067.683.238.183.17.283.41.276.658v21.621h-1.662c-.561 0-.655-.322-.678-.482V.23h1.38zm21.433 19.898c.004 1.509-1.182 2.763-2.715 2.872h-1.45a2.953 2.953 0 0 1-2.084-.833 2.846 2.846 0 0 1-.865-2.04V2.873c0-.765.312-1.5.865-2.039A2.953 2.953 0 0 1 191.732 0h1.45c1.575.05 2.822 1.325 2.808 2.872V6.32c.063.494-.187.977-.631 1.218l-1.779.873V3.263c0-.685-.565-1.24-1.263-1.24s-1.264.555-1.264 1.24v16.451c0 .685.566 1.24 1.264 1.24.698 0 1.263-.555 1.263-1.24v-3.033a1.302 1.302 0 0 1 .632-1.263l1.708-.736-.023 5.446z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </section>
+                    <section id="desktop-top-nav" class="desktop-only">
+                        <div class="outer-wrapper">
+                            <div class="wrapper nav-wrapper">
+                                <ul>
+                                    <li><a href="" title="Support">Support</a></li>
+                                    <li><a href="" title="Billing">Billing</a></li>
+                                    <li><a href="" title="Careers">Careers</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                    <nav>
+                        <div class="wrapper nav-wrapper">
+                            <ul class="" data-level="1">
+                                <li class="nav-has-logo desktop-only" data-level="1" data-page-id="1"><a href="{% url 'index' %}" class="" data-level="1">
+                                        <div id="header-static-logo"><svg xmlns="http://www.w3.org/2000/svg" width="196" height="23" viewBox="0 0 196 23">
+                                                <path fill="#9B9B9B" fill-rule="evenodd" d="M7.207 20.128c.001 1.542-1.238 2.81-2.808 2.872h-1.45a2.953 2.953 0 0 1-2.084-.833A2.846 2.846 0 0 1 0 20.127V2.873c.006-.761.32-1.49.873-2.024A2.954 2.954 0 0 1 2.948.023H4.4c1.575.05 2.821 1.325 2.808 2.872v3.447c.063.494-.187.977-.632 1.218l-1.685.85V3.263c0-.685-.565-1.24-1.263-1.24s-1.264.555-1.264 1.24v16.451c0 .685.566 1.24 1.264 1.24.698 0 1.263-.555 1.263-1.24v-3.033a1.302 1.302 0 0 1 .632-1.263l1.708-.736-.023 5.446zm16.356-6.732v9.374h-1.661a.722.722 0 0 1-.702-.574v-8.8L18.368.23h1.662c.42.024.75.367.748.781l1.591 8.524 1.498-8.524c0-.215.09-.421.25-.57a.804.804 0 0 1 .592-.211h1.732l-2.878 13.166zm21.223-.046v6.548c-.026 1.568-1.328 2.826-2.925 2.826h-4.259V.23h4.259c1.597 0 2.9 1.258 2.925 2.826v6.617a1.933 1.933 0 0 1-1.334 1.838 1.933 1.933 0 0 1 1.334 1.839zm-2.364-9.536a1.07 1.07 0 0 0-.334-.853 1.112 1.112 0 0 0-.882-.296h-1.287v7.79h1.287c.631 0 1.216-.3 1.216-1.31v-5.33zm0 10.133c0-.988-.585-1.287-1.216-1.287h-1.287v7.927h1.287c.33.029.657-.088.892-.319.235-.23.353-.55.324-.876v-5.445zm23.072 6.548c-.257.575-.655 1.47-.749 1.678-.27.435-.771.676-1.287.62h-5.241V.873a.72.72 0 0 1 .725-.643h6.13l-.795 1.677a1.27 1.27 0 0 1-1.24.644h-1.895a.544.544 0 0 0-.405.154.523.523 0 0 0-.157.397v6.686h3.533c-.257.575-.655 1.517-.748 1.7-.254.428-.74.67-1.24.62h-.983a.58.58 0 0 0-.562.552v7.812l4.914.023zm17.362 2.275c-.562 0-.655-.322-.679-.482l-1.614-9.628h-1.31v10.11h-2.34V.23h3.954c1.624-.026 2.968 1.232 3.019 2.826v5.836a3.846 3.846 0 0 1-1.217 3.079l1.825 10.776-1.638.023zm-2.34-12.27a1.231 1.231 0 0 0 1.217-1.102V3.493a1.231 1.231 0 0 0-1.217-1.103h-1.24v8.11h1.24zm23.423 12.27h-1.077c-.835.013-1.53-.628-1.568-1.447l-2.527-11.144V22.77h-2.34V.23h1.077c1.31 0 1.544.62 1.661 1.264l2.34 11.718V.23h2.34l.094 22.54zm19.889 0h-2.598l-2.059-15.51-2.059 15.51h-2.597L117.978.23h1.287c.983 0 1.146.62 1.24 1.218l3.323 21.322zm18.11-2.642c-.012 1.514-1.266 2.734-2.807 2.734h-1.802a2.86 2.86 0 0 1-2.054-.773 2.757 2.757 0 0 1-.87-1.984V.873a.696.696 0 0 1 .678-.643h1.661v19.484c-.006.321.12.63.348.86.229.229.542.358.869.358h.35a1.23 1.23 0 0 0 1.24-1.218V.23h2.34l.048 19.898zm19.726-18.22a1.247 1.247 0 0 1-1.24.62h-1.825a.604.604 0 0 0-.585.551V22.77h-1.662c-.561 0-.655-.322-.655-.482V2.528h-3.346V.942c0-.393.325-.712.726-.712h9.36l-.773 1.677zm12.8-1.678c.251-.02.5.067.683.238.183.17.283.41.276.658v21.621h-1.662c-.561 0-.655-.322-.678-.482V.23h1.38zm21.433 19.898c.004 1.509-1.182 2.763-2.715 2.872h-1.45a2.953 2.953 0 0 1-2.084-.833 2.846 2.846 0 0 1-.865-2.04V2.873c0-.765.312-1.5.865-2.039A2.953 2.953 0 0 1 191.732 0h1.45c1.575.05 2.822 1.325 2.808 2.872V6.32c.063.494-.187.977-.631 1.218l-1.779.873V3.263c0-.685-.565-1.24-1.263-1.24s-1.264.555-1.264 1.24v16.451c0 .685.566 1.24 1.264 1.24.698 0 1.263-.555 1.263-1.24v-3.033a1.302 1.302 0 0 1 .632-1.263l1.708-.736-.023 5.446z" />
+                                            </svg>
+                                        </div>
+                                        <div id="header-animated-logo"></div>
+                                    </a></li>
+                                <li class="mobile-only" data-level="1" data-page-id="1">
+                                    <a href="{% url 'index' %}" class="" data-level="1">Home</a>
+                                </li>
+                                <li class="" data-level="1" data-page-id="1003">
+                                    <a href="{% url 'portfolio:projects' %}" class="" data-level="1">Our Work</a>
+                                </li>
+                                <li class="nav-has-children" data-level="1" data-page-id="1002">
+                                    <i data-level="1" class="subpage-indicator fas fa-chevron-down"></i>
+                                    <a class="" data-level="1">Services</a>
+                                    <ul class="nav-submenu" data-level="2">
+                                        {% get_categories as categories %}
+                                        {% for category in categories %}
+                                        <li class="nav-has-children" data-level="2" data-page-id="1096"><i data-level="2" class="subpage-indicator fas fa-chevron-down"></i><a class="" data-level="2">{{ category.name }}</a>
+                                            <ul class="nav-submenu" data-level="3">
+                                                {% for service in category.services.all %}
+                                                <li class="" data-level="3" data-page-id="1013">
+                                                    <a href="" class="" data-level="3">{{ service.name }}</a>
+                                                </li>
+                                                {% endfor %}
+                                            </ul>
+                                        </li>
+                                        {% endfor %}
+                                        <li class="nav-has-children" data-level="2" data-page-id="1098"><i data-level="2" class="subpage-indicator fas fa-chevron-down"></i><a class="last" data-level="2">Do you need these features?</a>
+                                            <ul class="nav-submenu" data-level="3">
+                                                {% get_features as features %}
+                                                {% for feature in features %}
+                                                <li class="tag-industry" data-level="3" data-page-id="1091">
+                                                    <a href="" class="" data-level="3">{{ feature.name }}</a>
+                                                </li>
+
+                                                {% endfor %}
+
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="nav-has-children" data-level="1" data-page-id="1099"><i data-level="1" class="subpage-indicator fas fa-chevron-down"></i><a class="" data-level="1">About</a>
+                                    <ul class="nav-submenu" data-level="2">
+                                        <li class="" data-level="2" data-page-id="1111"><a href="" class="" data-level="2">Our Locations</a></li>
+                                        <li class="" data-level="2" data-page-id="1004"><a href="" class="" data-level="2">Our Team</a></li>
+                                        <li class="" data-level="2" data-page-id="1324"><a href="" class="last" data-level="2">Our Reviews</a></li>
+                                    </ul>
+                                </li>
+                                <li class="" data-level="1" data-page-id="1005"><a href="" class="" data-level="1">Let's Get Started</a></li>
+                                <li class="mobile-only nav-has-children tag-more" data-level="1" data-page-id="0"><i data-level="1" class="subpage-indicator fas fa-chevron-down"></i><a class="last" data-level="1">More</a>
+                                    <ul class="nav-submenu" data-level="2">
+                                        <li class="" data-level="2" data-page-id="1007"><a href="" class="" data-level="2">Blog</a></li>
+                                        <li class="" data-level="2" data-page-id="1008"><a href="" class="" data-level="2">Contact</a></li>
+                                        <li class="" data-level="2" data-page-id="1009"><a href="" class="" data-level="2">Careers</a></li>
+                                        <li class="" data-level="2" data-page-id="1010"><a href="" class="" data-level="2">Support</a></li>
+                                        <li class="" data-level="2" data-page-id="1011"><a href="" class="last" data-level="2">Billing</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <section id="desktop-sub-nav" class="desktop-only">
+                        <div class="wrapper nav-wrapper">
+                            <div class="subnav" data-parent-id="1003">
+                                <div class="subnav-inner">
+                                    <div class="subnav-section subnav-section-preview-text-page">
+                                        <div class="subnav-section-inner">
+                                            <div class="heading heading-7 mb-4">Our Work</div>
+                                            <div class="subnav-section-preview-text mb-4">
+                                                <p>Learn how we apply the many </p>
+                                                <p>tools at our disposal to move </p>
+                                                <p>your organiztion forward.</p>
+                                            </div>
+                                            <div class="subnav-section-button"><a href="" class="cms-btn cms-btn-primary">See All</a></div>
+                                        </div>
+                                    </div>
+                                    <div class="subnav-section subnav-section-featured subnav-section-case-studies subnav-section-secondary">
+                                        <div class="subnav-section-inner">
+                                            <script type="application/json" data-slick-config="nav-case-studies">
+                                            { "arrows": true, "dots": false, "slidesToShow": 2, "slidesToScroll": 2 }
+                                            </script>
+                                            <div data-slick="nav-case-studies">
+                                                <div data-slick-slide="1027">
+                                                    <div class="nav-case-study">
+                                                        <div class="nav-case-study-image" style="background-image: url({% static 'core/img/lynx_grill.jpg' %});">
+                                                            <a href="/our-work/lynx-grills"></a>
+                                                        </div>
+                                                        <div class="heading heading-8">
+                                                            <a href="/our-work/lynx-grills">Lynx Grills</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div data-slick-slide="1028">
+                                                    <div class="nav-case-study">
+                                                        <div class="nav-case-study-image" style="background-image: url({% static 'core/img/young-america.jpg' %});">
+                                                            <a href="/our-work/young-america-realty"></a>
+                                                        </div>
+                                                        <div class="heading heading-8">
+                                                            <a href="/our-work/young-america-realty">Young America Realty</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div data-slick-slide="1063">
+                                                    <div class="nav-case-study">
+                                                        <div class="nav-case-study-image" style="background-image: url({% static 'core/img/eureka.jpg' %});">
+                                                            <a href="/our-work/eureka-college"></a>
+                                                        </div>
+                                                        <div class="heading heading-8">
+                                                            <a href="/our-work/eureka-college">Eureka College</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div data-slick-slide="1052">
+                                                    <div class="nav-case-study">
+                                                        <div class="nav-case-study-image" style="background-image: url({% static 'mcrpc.jpg' %});">
+                                                            <a href="/our-work/mcrpc"></a>
+                                                        </div>
+                                                        <div class="heading heading-8">
+                                                            <a href="/our-work/mcrpc">MCRPC</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div data-slick-slide="1068">
+                                                    <div class="nav-case-study">
+                                                        <div class="nav-case-study-image" style="background-image: url({% static 'core/img/sugar_mama.jpg' %});">
+                                                            <a href="/our-work/sugar-mama"></a>
+                                                        </div>
+                                                        <div class="heading heading-8">
+                                                            <a href="/our-work/sugar-mama">Sugar Mama</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="subnav" data-parent-id="1002">
+                                <div class="subnav-inner">
+                                    <div class="subnav-section subnav-section-featured subnav-section-stack">
+                                        <div class="subnav-section-inner">
+                                            {% get_categories as categories %}
+
+                                            {% for category in categories %}
+                                            <div class="subnav-section-stack-section">
+                                                <div class="heading heading-7 mb-2">{{ category.name }}</div>
+                                                <ul>
+                                                    {% for service in category.services.all %}
+
+                                                    <li>
+                                                        <a href="/services/web-design/custom-web-design">{{ service.name }}</a>
+                                                    </li>
+
+                                                    {% endfor %}
+                                                </ul>
+                                            </div>
+                                            {% endfor %}
+
+                                        </div>
+                                    </div>
+                                    <div class="subnav-section subnav-section-featured subnav-section-secondary">
+                                        <div class="subnav-section-inner">
+                                            <div class="heading heading-7 mb-2">Do you need these features?</div>
+                                            <ul data-columns="1">
+                                                {% get_features as features %}
+                                                {% for feature in features %}
+                                                <li>
+                                                    <a href="">{{ feature.name }}</a>
+                                                </li>
+
+                                                {% endfor %}
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="subnav" data-parent-id="1029">
+                                <div class="subnav-inner">
+                                    <div class="subnav-section subnav-section-preview-text-page subnav-section-secondary">
+                                        <div class="subnav-section-inner">
+                                            <div class="heading heading-7 mb-4">Industry Solutions</div>
+                                            <div class="subnav-section-preview-text mb-4">
+                                                <p>See how our custom web design solutions have helped thousands of businesses grow across varying industries.</p>
+                                            </div>
+                                            <div class="subnav-section-button"></div>
+                                        </div>
+                                    </div>
+                                    <div class="subnav-section subnav-section-featured">
+                                        <div class="subnav-section-inner">
+                                            <ul data-columns="3">
+                                                <li>
+                                                    <a href="real-estate-web-design.html">Real Estate</a>
+                                                </li>
+                                                <li>
+                                                    <a href="healthcare-web-design.html">Healthcare</a>
+                                                </li>
+                                                <li>
+                                                    <a href="non-profit-web-design.html">Non-Profit</a>
+                                                </li>
+                                                <li>
+                                                    <a href="agriculture-web-design.html">Agriculture</a>
+                                                </li>
+                                                <li>
+                                                    <a href="education-web-design.html">Education</a>
+                                                </li>
+                                                <li>
+                                                    <a href="construction-web-design.html">Construction</a>
+                                                </li>
+                                                <li>
+                                                    <a href="restaurant-web-design.html">Restaurant</a>
+                                                </li>
+                                                <li>
+                                                    <a href="finance-and-bank-web-design.html">Finance</a>
+                                                </li>
+                                                <li>
+                                                    <a href="luxury-web-design.html">Luxury</a>
+                                                </li>
+                                                <li>
+                                                    <a href="landscaping.html">Landscaping</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="subnav" data-parent-id="1099">
+                                <div class="subnav-inner">
+                                    <div class="subnav-section subnav-section-featured">
+                                        <div class="subnav-section-inner">
+                                            <ul data-columns="1">
+                                                <li>
+                                                    <a href="/about/our-locations">Our Locations</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/about/our-team">Our Team</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/about/our-reviews">Our Reviews</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </section>
+                <section id="mobile-menu-bar" class="mobile-only">
+                    <div id="mobile-menu-button">
+                        <button class="hamburger hamburger--collapse mobile-only" type="button">
+                            <span class="hamburger-box">
+                                <span class="hamburger-inner"></span>
+                            </span>
+                        </button>
+                        <div class="title">Menu</div>
+                    </div>
+                    <div id="mobile-lets-talk-button" data-lets-talk-click-event="open">
+                        <a>Let's Talk <i data-icon-state="closed"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="11" viewBox="0 0 14 11">
+                                    <path fill="#FFF" fill-rule="nonzero" d="M8.385 11L14 5.5 8.385 0v1.508l3.533 3.46L0 4.967v1.065l11.915.001-3.53 3.456z" />
+                                </svg>
+                            </i><i data-icon-state="open"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="39" viewBox="0 0 40 39">
+                                    <g fill="none" fill-rule="evenodd" stroke="#0C0C0D" stroke-linecap="square" stroke-width="4">
+                                        <path d="M3.737 3.029L36.263 35.97M3.737 35.971L36.263 3.03" />
+                                    </g>
+                                </svg>
+                            </i></a>
                     </div>
                 </section>
-                <section id="desktop-top-nav" class="desktop-only">
-                    <div class="outer-wrapper">
-                        <div class="wrapper nav-wrapper">
-                            <ul>
-                                <li><a href="" title="Support">Support</a></li>
-                                <li><a href="" title="Billing">Billing</a></li>
-                                <li><a href="" title="Careers">Careers</a></li>
+            </header>
+            <section id="content">
+                {% block content %}
+                {% endblock content %}
+                <section data-template="footer-feature-boxes" class="footer">
+                    <div class="footer-feature-boxes-intro">
+                        <div class="heading heading-4">How Can We Help You?</div>
+                    </div>
+                    <div class="flexbox-row">
+                        <div class="flexbox-col">
+                            <div class="footer-feature-box wrapper half">
+                                <div class="footer-feature-box-inner">
+                                    <div class="footer-feature-box-title heading heading-6">Setup a free consultation</div>
+                                    <div class="footer-feature-box-text">
+                                        <p>Are you ready to discuss your project?</p>
+                                    </div>
+                                    <div class="footer-feature-box-button"><a href="/lets-talk" class="cms-btn cms-btn-tertiary">Let’s Get Started</a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flexbox-col">
+                            <div class="footer-feature-box wrapper half">
+                                <div class="footer-feature-box-inner">
+                                    <div class="footer-feature-box-title heading heading-6">Need more information?</div>
+                                    <div class="footer-feature-box-text">
+                                        <p>Do you have additional questions for us?</p>
+                                    </div>
+                                    <div class="footer-feature-box-button"><a href="/lets-talk" class="cms-btn cms-btn-tertiary">Get More Info</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </section>
+        </section>
+        <footer>
+            <div id="footer-sitemap">
+                <div class="wrapper">
+                    <div id="footer-sitemap-sections">
+                        <div class="footer-sitemap-section">
+                            <div class="heading heading-8">Cities</div>
+                            <ul class="footer-sitemap-section-links" data-columns="1">
+                                <li>
+                                    <a href="/web-design/custom-web-designers-peoria">Web Designers in Peoria, IL</a>
+                                </li>
+                                <li>
+                                    <a href="/web-design/custom-web-designers-champaign-il">Web Designers in Champaign, IL</a>
+                                </li>
+                                <li>
+                                    <a href="/web-design/custom-web-designers-chicago-il">Web Designers in Chicago, IL</a>
+                                </li>
+                                <li>
+                                    <a href="/web-design/custom-web-designers-bloomington-il">Web Designers in Bloomington, IL</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer-sitemap-section">
+                            <div class="heading heading-8"><a href="/industry-solutions">Industry Solutions</a></div>
+                            <ul class="footer-sitemap-section-links" data-columns="2">
+                                <li>
+                                    <a href="healthcare-web-design.html">Healthcare</a>
+                                </li>
+                                <li>
+                                    <a href="real-estate-web-design.html">Real Estate</a>
+                                </li>
+                                <li>
+                                    <a href="non-profit-web-design.html">Non-Profit</a>
+                                </li>
+                                <li>
+                                    <a href="agriculture-web-design.html">Agriculture</a>
+                                </li>
+                                <li>
+                                    <a href="education-web-design.html">Education</a>
+                                </li>
+                                <li>
+                                    <a href="construction-web-design.html">Construction</a>
+                                </li>
+                                <li>
+                                    <a href="restaurant-web-design.html">Restaurant</a>
+                                </li>
+                                <li>
+                                    <a href="luxury-web-design.html">Luxury</a>
+                                </li>
+                                <li>
+                                    <a href="finance-and-bank-web-design.html">Finance</a>
+                                </li>
+                                <li>
+                                    <a href="landscaping.html">Landscaping</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer-sitemap-section">
+                            <div class="heading heading-8">Techbits</div>
+                            <ul class="footer-sitemap-section-links" data-columns="1">
+                                <li>
+                                    <a href="/blog">Blog</a>
+                                </li>
+                                <li>
+                                    <a href="/contact">Contact</a>
+                                </li>
+                                <li>
+                                    <a href="https://careers.techbits.com/">Careers</a>
+                                </li>
+                                <li>
+                                    <a href="https://techbits.freshdesk.com/">Support</a>
+                                </li>
+                                <li>
+                                    <a href="https://billing.techbitsdesign.com/">Billing</a>
+                                </li>
                             </ul>
                         </div>
                     </div>
-                </section>
-                <nav>
-                    <div class="wrapper nav-wrapper">
-                        <ul class="" data-level="1">
-                            <li class="nav-has-logo desktop-only" data-level="1" data-page-id="1"><a href="{% url 'index' %}" class="" data-level="1">
-                                    <div id="header-static-logo"><svg xmlns="http://www.w3.org/2000/svg" width="196" height="23" viewBox="0 0 196 23">
-                                            <path fill="#9B9B9B" fill-rule="evenodd" d="M7.207 20.128c.001 1.542-1.238 2.81-2.808 2.872h-1.45a2.953 2.953 0 0 1-2.084-.833A2.846 2.846 0 0 1 0 20.127V2.873c.006-.761.32-1.49.873-2.024A2.954 2.954 0 0 1 2.948.023H4.4c1.575.05 2.821 1.325 2.808 2.872v3.447c.063.494-.187.977-.632 1.218l-1.685.85V3.263c0-.685-.565-1.24-1.263-1.24s-1.264.555-1.264 1.24v16.451c0 .685.566 1.24 1.264 1.24.698 0 1.263-.555 1.263-1.24v-3.033a1.302 1.302 0 0 1 .632-1.263l1.708-.736-.023 5.446zm16.356-6.732v9.374h-1.661a.722.722 0 0 1-.702-.574v-8.8L18.368.23h1.662c.42.024.75.367.748.781l1.591 8.524 1.498-8.524c0-.215.09-.421.25-.57a.804.804 0 0 1 .592-.211h1.732l-2.878 13.166zm21.223-.046v6.548c-.026 1.568-1.328 2.826-2.925 2.826h-4.259V.23h4.259c1.597 0 2.9 1.258 2.925 2.826v6.617a1.933 1.933 0 0 1-1.334 1.838 1.933 1.933 0 0 1 1.334 1.839zm-2.364-9.536a1.07 1.07 0 0 0-.334-.853 1.112 1.112 0 0 0-.882-.296h-1.287v7.79h1.287c.631 0 1.216-.3 1.216-1.31v-5.33zm0 10.133c0-.988-.585-1.287-1.216-1.287h-1.287v7.927h1.287c.33.029.657-.088.892-.319.235-.23.353-.55.324-.876v-5.445zm23.072 6.548c-.257.575-.655 1.47-.749 1.678-.27.435-.771.676-1.287.62h-5.241V.873a.72.72 0 0 1 .725-.643h6.13l-.795 1.677a1.27 1.27 0 0 1-1.24.644h-1.895a.544.544 0 0 0-.405.154.523.523 0 0 0-.157.397v6.686h3.533c-.257.575-.655 1.517-.748 1.7-.254.428-.74.67-1.24.62h-.983a.58.58 0 0 0-.562.552v7.812l4.914.023zm17.362 2.275c-.562 0-.655-.322-.679-.482l-1.614-9.628h-1.31v10.11h-2.34V.23h3.954c1.624-.026 2.968 1.232 3.019 2.826v5.836a3.846 3.846 0 0 1-1.217 3.079l1.825 10.776-1.638.023zm-2.34-12.27a1.231 1.231 0 0 0 1.217-1.102V3.493a1.231 1.231 0 0 0-1.217-1.103h-1.24v8.11h1.24zm23.423 12.27h-1.077c-.835.013-1.53-.628-1.568-1.447l-2.527-11.144V22.77h-2.34V.23h1.077c1.31 0 1.544.62 1.661 1.264l2.34 11.718V.23h2.34l.094 22.54zm19.889 0h-2.598l-2.059-15.51-2.059 15.51h-2.597L117.978.23h1.287c.983 0 1.146.62 1.24 1.218l3.323 21.322zm18.11-2.642c-.012 1.514-1.266 2.734-2.807 2.734h-1.802a2.86 2.86 0 0 1-2.054-.773 2.757 2.757 0 0 1-.87-1.984V.873a.696.696 0 0 1 .678-.643h1.661v19.484c-.006.321.12.63.348.86.229.229.542.358.869.358h.35a1.23 1.23 0 0 0 1.24-1.218V.23h2.34l.048 19.898zm19.726-18.22a1.247 1.247 0 0 1-1.24.62h-1.825a.604.604 0 0 0-.585.551V22.77h-1.662c-.561 0-.655-.322-.655-.482V2.528h-3.346V.942c0-.393.325-.712.726-.712h9.36l-.773 1.677zm12.8-1.678c.251-.02.5.067.683.238.183.17.283.41.276.658v21.621h-1.662c-.561 0-.655-.322-.678-.482V.23h1.38zm21.433 19.898c.004 1.509-1.182 2.763-2.715 2.872h-1.45a2.953 2.953 0 0 1-2.084-.833 2.846 2.846 0 0 1-.865-2.04V2.873c0-.765.312-1.5.865-2.039A2.953 2.953 0 0 1 191.732 0h1.45c1.575.05 2.822 1.325 2.808 2.872V6.32c.063.494-.187.977-.631 1.218l-1.779.873V3.263c0-.685-.565-1.24-1.263-1.24s-1.264.555-1.264 1.24v16.451c0 .685.566 1.24 1.264 1.24.698 0 1.263-.555 1.263-1.24v-3.033a1.302 1.302 0 0 1 .632-1.263l1.708-.736-.023 5.446z" />
-                                        </svg>
-                                    </div>
-                                    <div id="header-animated-logo"></div>
-                                </a></li>
-                            <li class="mobile-only" data-level="1" data-page-id="1">
-                                <a href="{% url 'index' %}" class="" data-level="1">Home</a>
-                            </li>
-                            <li class="" data-level="1" data-page-id="1003">
-                                <a href="" class="" data-level="1">Our Work</a>
-                            </li>
-                            <li class="nav-has-children" data-level="1" data-page-id="1002">
-                                <i data-level="1" class="subpage-indicator fas fa-chevron-down"></i>
-                                <a class="" data-level="1">Services</a>
-                                <ul class="nav-submenu" data-level="2">
-                                    <li class="nav-has-children" data-level="2" data-page-id="1096"><i data-level="2" class="subpage-indicator fas fa-chevron-down"></i><a class="" data-level="2">Web Design</a>
-                                        <ul class="nav-submenu" data-level="3">
-                                            <li class="" data-level="3" data-page-id="1013"><a href="" class="" data-level="3">Custom Web Design</a></li>
-                                            <li class="" data-level="3" data-page-id="1012"><a href="" class="last" data-level="3">Small Business Web Design</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="nav-has-children" data-level="2" data-page-id="1015"><i data-level="2" class="subpage-indicator fas fa-chevron-down"></i><a class="" data-level="2">Web Marketing</a>
-                                        <ul class="nav-submenu" data-level="3">
-                                            <li class="" data-level="3" data-page-id="1016">
-                                                <a href="" class="" data-level="3">Search Engine Optimization</a>
-                                            </li>
-                                            <li class="" data-level="3" data-page-id="1041">
-                                                <a href="" class="" data-level="3">Pay Per Click Web Marketing</a>
-                                            </li>
-                                            <li class="" data-level="3" data-page-id="1043">
-                                                <a href="" class="last" data-level="3">5-Star Review Generation</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="nav-has-children" data-level="2" data-page-id="1098"><i data-level="2" class="subpage-indicator fas fa-chevron-down"></i><a class="last" data-level="2">Features You Need</a>
-                                        <ul class="nav-submenu" data-level="3">
-                                            <li class="tag-industry" data-level="3" data-page-id="1091"><a href="" class="" data-level="3">Employment Application</a></li>
-                                            <li class="" data-level="3" data-page-id="1092"><a href="" class="" data-level="3">Online Payment Processing</a></li>
-                                            <li class="" data-level="3" data-page-id="1108"><a href="" class="" data-level="3">Custom Online Forms</a></li>
-                                            <li class="" data-level="3" data-page-id="1109"><a href="" class="" data-level="3">Customer / Employee Portal</a></li>
-                                            <li class="" data-level="3" data-page-id="1112"><a href="" class="" data-level="3">Document Center</a></li>
-                                            <li class="" data-level="3" data-page-id="1164"><a href="" class="" data-level="3">Custom Map / Locator Tool</a></li>
-                                            <li class="" data-level="3" data-page-id="1113"><a href="" class="" data-level="3">Third Party Integrations</a></li>
-                                            <li class="" data-level="3" data-page-id="1022"><a href="" class="" data-level="3">The Techbits Billboard</a></li>
-                                            <li class="tag-industry" data-level="3" data-page-id="1274"><a href="" class="last" data-level="3">Accessibility Widget</a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="nav-has-children" data-level="1" data-page-id="1099"><i data-level="1" class="subpage-indicator fas fa-chevron-down"></i><a class="" data-level="1">About</a>
-                                <ul class="nav-submenu" data-level="2">
-                                    <li class="" data-level="2" data-page-id="1111"><a href="" class="" data-level="2">Our Locations</a></li>
-                                    <li class="" data-level="2" data-page-id="1004"><a href="" class="" data-level="2">Our Team</a></li>
-                                    <li class="" data-level="2" data-page-id="1324"><a href="" class="last" data-level="2">Our Reviews</a></li>
-                                </ul>
-                            </li>
-                            <li class="" data-level="1" data-page-id="1005"><a href="" class="" data-level="1">Let's Get Started</a></li>
-                            <li class="mobile-only nav-has-children tag-more" data-level="1" data-page-id="0"><i data-level="1" class="subpage-indicator fas fa-chevron-down"></i><a class="last" data-level="1">More</a>
-                                <ul class="nav-submenu" data-level="2">
-                                    <li class="" data-level="2" data-page-id="1007"><a href="" class="" data-level="2">Blog</a></li>
-                                    <li class="" data-level="2" data-page-id="1008"><a href="" class="" data-level="2">Contact</a></li>
-                                    <li class="" data-level="2" data-page-id="1009"><a href="" class="" data-level="2">Careers</a></li>
-                                    <li class="" data-level="2" data-page-id="1010"><a href="" class="" data-level="2">Support</a></li>
-                                    <li class="" data-level="2" data-page-id="1011"><a href="" class="last" data-level="2">Billing</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                </nav>
-                <section id="desktop-sub-nav" class="desktop-only">
-                    <div class="wrapper nav-wrapper">
-                        <div class="subnav" data-parent-id="1003">
-                            <div class="subnav-inner">
-                                <div class="subnav-section subnav-section-preview-text-page">
-                                    <div class="subnav-section-inner">
-                                        <div class="heading heading-7 mb-4">Our Work</div>
-                                        <div class="subnav-section-preview-text mb-4">
-                                            <p>Learn how we apply the many </p>
-                                            <p>tools at our disposal to move </p>
-                                            <p>your organiztion forward.</p>
-                                        </div>
-                                        <div class="subnav-section-button"><a href="" class="cms-btn cms-btn-primary">See All</a></div>
-                                    </div>
-                                </div>
-                                <div class="subnav-section subnav-section-featured subnav-section-case-studies subnav-section-secondary">
-                                    <div class="subnav-section-inner">
-                                        <script type="application/json" data-slick-config="nav-case-studies">
-                                        { "arrows": true, "dots": false, "slidesToShow": 2, "slidesToScroll": 2 }
-                                        </script>
-                                        <div data-slick="nav-case-studies">
-                                            <div data-slick-slide="1027">
-                                                <div class="nav-case-study">
-                                                    <div class="nav-case-study-image" style="background-image: url({% static 'core/img/lynx_grill.jpg' %});">
-                                                        <a href="/our-work/lynx-grills"></a>
-                                                    </div>
-                                                    <div class="heading heading-8">
-                                                        <a href="/our-work/lynx-grills">Lynx Grills</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div data-slick-slide="1028">
-                                                <div class="nav-case-study">
-                                                    <div class="nav-case-study-image" style="background-image: url({% static 'core/img/young-america.jpg' %});">
-                                                        <a href="/our-work/young-america-realty"></a>
-                                                    </div>
-                                                    <div class="heading heading-8">
-                                                        <a href="/our-work/young-america-realty">Young America Realty</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div data-slick-slide="1063">
-                                                <div class="nav-case-study">
-                                                    <div class="nav-case-study-image" style="background-image: url({% static 'core/img/eureka.jpg' %});">
-                                                        <a href="/our-work/eureka-college"></a>
-                                                    </div>
-                                                    <div class="heading heading-8">
-                                                        <a href="/our-work/eureka-college">Eureka College</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div data-slick-slide="1052">
-                                                <div class="nav-case-study">
-                                                    <div class="nav-case-study-image" style="background-image: url({% static 'mcrpc.jpg' %});">
-                                                        <a href="/our-work/mcrpc"></a>
-                                                    </div>
-                                                    <div class="heading heading-8">
-                                                        <a href="/our-work/mcrpc">MCRPC</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div data-slick-slide="1068">
-                                                <div class="nav-case-study">
-                                                    <div class="nav-case-study-image" style="background-image: url({% static 'core/img/sugar_mama.jpg' %});">
-                                                        <a href="/our-work/sugar-mama"></a>
-                                                    </div>
-                                                    <div class="heading heading-8">
-                                                        <a href="/our-work/sugar-mama">Sugar Mama</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="subnav" data-parent-id="1002">
-                            <div class="subnav-inner">
-                                <div class="subnav-section subnav-section-featured subnav-section-stack">
-                                    <div class="subnav-section-inner">
-                                        <div class="subnav-section-stack-section">
-                                            <div class="heading heading-7 mb-2">Web Design</div>
-                                            <ul>
-                                                <li>
-                                                    <a href="/services/web-design/custom-web-design">Custom Web Design</a>
-                                                </li>
-                                                <li>
-                                                    <a href="/services/web-design/small-business-web-design">Small Business Web Design</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="subnav-section-stack-section">
-                                            <div class="heading heading-7 mb-2">Web Marketing</div>
-                                            <ul>
-                                                <li>
-                                                    <a href="/services/web-marketing/search-engine-optimization">Search Engine Optimization</a>
-                                                </li>
-                                                <li>
-                                                    <a href="/services/web-marketing/pay-per-click-web-marketing">Pay Per Click Web Marketing</a>
-                                                </li>
-                                                <li>
-                                                    <a href="/services/web-marketing/5-star-review-generation">5-Star Review Generation</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="subnav-section subnav-section-featured subnav-section-secondary">
-                                    <div class="subnav-section-inner">
-                                        <div class="heading heading-7 mb-2">Features You Need</div>
-                                        <ul data-columns="1">
-                                            <li>
-                                                <a href="/services/features-you-need/employment-application">Employment Application</a>
-                                            </li>
-                                            <li>
-                                                <a href="/services/features-you-need/online-payment-processing">Online Payment Processing</a>
-                                            </li>
-                                            <li>
-                                                <a href="/services/features-you-need/custom-online-forms">Custom Online Forms</a>
-                                            </li>
-                                            <li>
-                                                <a href="/services/features-you-need/customer-employee-portal">Customer / Employee Portal</a>
-                                            </li>
-                                            <li>
-                                                <a href="/services/features-you-need/document-center">Document Center</a>
-                                            </li>
-                                            <li>
-                                                <a href="/services/features-you-need/custom-map-locator-tool">Custom Map / Locator Tool</a>
-                                            </li>
-                                            <li>
-                                                <a href="/services/features-you-need/third-party-integrations">Third Party Integrations</a>
-                                            </li>
-                                            <li>
-                                                <a href="/services/features-you-need/the-techbits-billboard">The Techbits Billboard</a>
-                                            </li>
-                                            <li>
-                                                <a href="/services/features-you-need/accessibility-widget">Accessibility Widget</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="subnav" data-parent-id="1029">
-                            <div class="subnav-inner">
-                                <div class="subnav-section subnav-section-preview-text-page subnav-section-secondary">
-                                    <div class="subnav-section-inner">
-                                        <div class="heading heading-7 mb-4">Industry Solutions</div>
-                                        <div class="subnav-section-preview-text mb-4">
-                                            <p>See how our custom web design solutions have helped thousands of businesses grow across varying industries.</p>
-                                        </div>
-                                        <div class="subnav-section-button"></div>
-                                    </div>
-                                </div>
-                                <div class="subnav-section subnav-section-featured">
-                                    <div class="subnav-section-inner">
-                                        <ul data-columns="3">
-                                            <li>
-                                                <a href="real-estate-web-design.html">Real Estate</a>
-                                            </li>
-                                            <li>
-                                                <a href="healthcare-web-design.html">Healthcare</a>
-                                            </li>
-                                            <li>
-                                                <a href="non-profit-web-design.html">Non-Profit</a>
-                                            </li>
-                                            <li>
-                                                <a href="agriculture-web-design.html">Agriculture</a>
-                                            </li>
-                                            <li>
-                                                <a href="education-web-design.html">Education</a>
-                                            </li>
-                                            <li>
-                                                <a href="construction-web-design.html">Construction</a>
-                                            </li>
-                                            <li>
-                                                <a href="restaurant-web-design.html">Restaurant</a>
-                                            </li>
-                                            <li>
-                                                <a href="finance-and-bank-web-design.html">Finance</a>
-                                            </li>
-                                            <li>
-                                                <a href="luxury-web-design.html">Luxury</a>
-                                            </li>
-                                            <li>
-                                                <a href="landscaping.html">Landscaping</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="subnav" data-parent-id="1099">
-                            <div class="subnav-inner">
-                                <div class="subnav-section subnav-section-featured">
-                                    <div class="subnav-section-inner">
-                                        <ul data-columns="1">
-                                            <li>
-                                                <a href="/about/our-locations">Our Locations</a>
-                                            </li>
-                                            <li>
-                                                <a href="/about/our-team">Our Team</a>
-                                            </li>
-                                            <li>
-                                                <a href="/about/our-reviews">Our Reviews</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </section>
-            <section id="mobile-menu-bar" class="mobile-only">
-                <div id="mobile-menu-button">
-                    <button class="hamburger hamburger--collapse mobile-only" type="button">
-                        <span class="hamburger-box">
-                            <span class="hamburger-inner"></span>
-                        </span>
-                    </button>
-                    <div class="title">Menu</div>
-                </div>
-                <div id="mobile-lets-talk-button" data-lets-talk-click-event="open">
-                    <a>Let's Talk <i data-icon-state="closed"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="11" viewBox="0 0 14 11">
-                                <path fill="#FFF" fill-rule="nonzero" d="M8.385 11L14 5.5 8.385 0v1.508l3.533 3.46L0 4.967v1.065l11.915.001-3.53 3.456z" />
-                            </svg>
-                        </i><i data-icon-state="open"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="39" viewBox="0 0 40 39">
-                                <g fill="none" fill-rule="evenodd" stroke="#0C0C0D" stroke-linecap="square" stroke-width="4">
-                                    <path d="M3.737 3.029L36.263 35.97M3.737 35.971L36.263 3.03" />
-                                </g>
-                            </svg>
-                        </i></a>
-                </div>
-            </section>
-        </header>
-        <section id="content">
-            {% block content %}
-            {% endblock content %}
-            <section data-template="footer-feature-boxes" class="footer">
-                <div class="footer-feature-boxes-intro">
-                    <div class="heading heading-4">How Can We Help You?</div>
-                </div>
-                <div class="flexbox-row">
-                    <div class="flexbox-col">
-                        <div class="footer-feature-box wrapper half">
-                            <div class="footer-feature-box-inner">
-                                <div class="footer-feature-box-title heading heading-6">Setup a free consultation</div>
-                                <div class="footer-feature-box-text">
-                                    <p>Are you ready to discuss your project?</p>
-                                </div>
-                                <div class="footer-feature-box-button"><a href="/lets-talk" class="cms-btn cms-btn-tertiary">Let’s Get Started</a></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="flexbox-col">
-                        <div class="footer-feature-box wrapper half">
-                            <div class="footer-feature-box-inner">
-                                <div class="footer-feature-box-title heading heading-6">Need more information?</div>
-                                <div class="footer-feature-box-text">
-                                    <p>Do you have additional questions for us?</p>
-                                </div>
-                                <div class="footer-feature-box-button"><a href="/lets-talk" class="cms-btn cms-btn-tertiary">Get More Info</a></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </section>
-    </section>
-    <footer>
-        <div id="footer-sitemap">
-            <div class="wrapper">
-                <div id="footer-sitemap-sections">
-                    <div class="footer-sitemap-section">
-                        <div class="heading heading-8">Cities</div>
-                        <ul class="footer-sitemap-section-links" data-columns="1">
-                            <li>
-                                <a href="/web-design/custom-web-designers-peoria">Web Designers in Peoria, IL</a>
-                            </li>
-                            <li>
-                                <a href="/web-design/custom-web-designers-champaign-il">Web Designers in Champaign, IL</a>
-                            </li>
-                            <li>
-                                <a href="/web-design/custom-web-designers-chicago-il">Web Designers in Chicago, IL</a>
-                            </li>
-                            <li>
-                                <a href="/web-design/custom-web-designers-bloomington-il">Web Designers in Bloomington, IL</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="footer-sitemap-section">
-                        <div class="heading heading-8"><a href="/industry-solutions">Industry Solutions</a></div>
-                        <ul class="footer-sitemap-section-links" data-columns="2">
-                            <li>
-                                <a href="healthcare-web-design.html">Healthcare</a>
-                            </li>
-                            <li>
-                                <a href="real-estate-web-design.html">Real Estate</a>
-                            </li>
-                            <li>
-                                <a href="non-profit-web-design.html">Non-Profit</a>
-                            </li>
-                            <li>
-                                <a href="agriculture-web-design.html">Agriculture</a>
-                            </li>
-                            <li>
-                                <a href="education-web-design.html">Education</a>
-                            </li>
-                            <li>
-                                <a href="construction-web-design.html">Construction</a>
-                            </li>
-                            <li>
-                                <a href="restaurant-web-design.html">Restaurant</a>
-                            </li>
-                            <li>
-                                <a href="luxury-web-design.html">Luxury</a>
-                            </li>
-                            <li>
-                                <a href="finance-and-bank-web-design.html">Finance</a>
-                            </li>
-                            <li>
-                                <a href="landscaping.html">Landscaping</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="footer-sitemap-section">
-                        <div class="heading heading-8">Techbits</div>
-                        <ul class="footer-sitemap-section-links" data-columns="1">
-                            <li>
-                                <a href="/blog">Blog</a>
-                            </li>
-                            <li>
-                                <a href="/contact">Contact</a>
-                            </li>
-                            <li>
-                                <a href="https://careers.techbits.com/">Careers</a>
-                            </li>
-                            <li>
-                                <a href="https://techbits.freshdesk.com/">Support</a>
-                            </li>
-                            <li>
-                                <a href="https://billing.techbitsdesign.com/">Billing</a>
-                            </li>
-                        </ul>
-                    </div>
                 </div>
             </div>
-        </div>
-        <div id="footer-bottom">
-            <div class="wrapper">
-                <div id="footer-bottom-wrapper">
-                    <div id="footer-bottom-logo">
-                        <link rel="stylesheet" type="text/css" href="/modules/seo/techbitsLogoCSS" />
-                        <div id="cms-techbits-logo">
-                            <a href="/" target="_blank">
-                                <div id="cms-techbits-logo-line-1">
-                                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 375.8 46" style="enable-background:new 0 0 375.8 46;" xml:space="preserve">
-                                        <style type="text/css">
-                                        .st0 {
-                                            display: none;
-                                        }
-                                        </style>
-                                        <g>
-                                            <path class="st0" d="M6.3,39.6c0,3.1-2.2,5.2-5.2,5.2h-2.7c-3.1,0-5.7-2.2-5.7-5.2l0,0V6.9c0-3.1,2.6-5.2,5.7-5.2l0,0H1
+            <div id="footer-bottom">
+                <div class="wrapper">
+                    <div id="footer-bottom-wrapper">
+                        <div id="footer-bottom-logo">
+                            <link rel="stylesheet" type="text/css" href="/modules/seo/techbitsLogoCSS" />
+                            <div id="cms-techbits-logo">
+                                <a href="/" target="_blank">
+                                    <div id="cms-techbits-logo-line-1">
+                                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 375.8 46" style="enable-background:new 0 0 375.8 46;" xml:space="preserve">
+                                            <style type="text/css">
+                                            .st0 {
+                                                display: none;
+                                            }
+                                            </style>
+                                            <g>
+                                                <path class="st0" d="M6.3,39.6c0,3.1-2.2,5.2-5.2,5.2h-2.7c-3.1,0-5.7-2.2-5.7-5.2l0,0V6.9c0-3.1,2.6-5.2,5.7-5.2l0,0H1
         c3.1,0,5.2,2.6,5.2,5.2v6.5c0,0.9-0.4,1.7-1.3,2.2l-3.1,1.7v-10c0-1.3-0.9-2.2-2.2-2.2s-2,0.9-2,2.2v31.4c0,1.3,0.9,2.2,2.2,2.2
         S2,40,2,38.7V33c0-0.9,0.4-1.7,1.3-2.6l3.1-1.3v10.5H6.3z M36.8,26.5v17.9h-3.1c-0.4,0-1.3-0.4-1.3-0.9v-17L27.2,1.6h3.1
         c0.9,0,1.3,0.9,1.3,1.3L34.7,19l2.5-16c0-0.9,0.9-1.3,1.3-1.3l0,0h3.1L36.8,26.5z M76.5,26.5v12.6c0,3.1-2.6,5.2-5.2,5.2h-7.8V1.6
@@ -532,190 +500,190 @@
         c-3.1,0-5.7-2.2-5.7-5.2l0,0V6.9c0-3.1,2.6-5.7,5.2-5.7l0,0h2.6c3.1,0,5.2,2.6,5.2,5.2V13c0,0.9-0.4,1.7-1.3,2.2l-2.6,2.2v-10
         c0-1.3-0.9-2.2-2.2-2.2s-2.1,0.8-2.1,2.1v31.4c0,1.3,0.9,2.2,2.2,2.2s2.2-0.9,2.2-2.2V33c0-0.9,0.4-1.7,1.3-2.6l3.1-1.3v10.5H358.2
         z" />
-                                            <g>
-                                                <path d="M368,5.2V1.9h-1.2V1.2h3v0.7h-1.2v3.3H368z" />
-                                                <path d="M374,5.2v-3l-1.2,3h-0.3l-1.2-3v3h-0.7v-4h0.9l1.2,2.8l1.2-2.8h0.9v4H374z" />
+                                                <g>
+                                                    <path d="M368,5.2V1.9h-1.2V1.2h3v0.7h-1.2v3.3H368z" />
+                                                    <path d="M374,5.2v-3l-1.2,3h-0.3l-1.2-3v3h-0.7v-4h0.9l1.2,2.8l1.2-2.8h0.9v4H374z" />
+                                                </g>
                                             </g>
-                                        </g>
-                                        <g>
-                                            <path d="M14.2,39.3c0,2.9-2.3,5.3-5.2,5.4H6.3c-3.1,0-5.5-2.4-5.5-5.4V6.6c0-3,2.4-5.4,5.5-5.4H9c2.9,0.1,5.2,2.5,5.2,5.4v6.5
+                                            <g>
+                                                <path d="M14.2,39.3c0,2.9-2.3,5.3-5.2,5.4H6.3c-3.1,0-5.5-2.4-5.5-5.4V6.6c0-3,2.4-5.4,5.5-5.4H9c2.9,0.1,5.2,2.5,5.2,5.4v6.5
         c0,1.4-0.6,2.1-1.2,2.3l-3.2,1.5V7.3C9.8,6,8.8,5,7.5,5S5.2,6,5.2,7.3v31.2c0,1.3,1,2.4,2.3,2.4s2.4-1,2.4-2.4v-5.7
         c0-1.4,0.6-2.1,1.2-2.4c0.4-0.2,2.1-0.9,3.2-1.4L14.2,39.3L14.2,39.3z" />
-                                            <path d="M44.6,26.5v17.8h-3.1c-0.7,0-1.2-0.5-1.3-1.3V26.5L35,1.5h3.2c0.1,0,1.2,0.1,1.4,1.5l2.8,16.2L45.2,3
+                                                <path d="M44.6,26.5v17.8h-3.1c-0.7,0-1.2-0.5-1.3-1.3V26.5L35,1.5h3.2c0.1,0,1.2,0.1,1.4,1.5l2.8,16.2L45.2,3
         c0.2-1.4,1.3-1.5,1.4-1.5h3.2L44.6,26.5z" />
-                                            <path d="M84.1,26.4v12.5c-0.1,3-2.4,5.4-5.4,5.4h-7.9V1.6h7.9c3,0,5.4,2.4,5.4,5.4v12.5c0,0,0.1,2.7-2.5,3.5
+                                                <path d="M84.1,26.4v12.5c-0.1,3-2.4,5.4-5.4,5.4h-7.9V1.6h7.9c3,0,5.4,2.4,5.4,5.4v12.5c0,0,0.1,2.7-2.5,3.5
         C84.2,23.7,84.1,26.4,84.1,26.4z M79.7,8.2c0-1.6-1.1-2.2-2.2-2.2h-2.4v14.9h2.4c1.2,0,2.3-0.5,2.3-2.5V8.2H79.7z M79.7,27.4
         c0-1.9-1.1-2.4-2.3-2.4H75v15h2.5c1.2,0,2.3-0.6,2.3-2.3V27.4H79.7z" />
-                                            <path d="M122.7,40c-0.5,1.1-1.2,2.8-1.4,3.2c-0.3,0.5-1,1.2-2.4,1.2h-9.8V2.8c0.1-0.7,0.6-1.2,1.3-1.2h11.4l-1.5,3.2
+                                                <path d="M122.7,40c-0.5,1.1-1.2,2.8-1.4,3.2c-0.3,0.5-1,1.2-2.4,1.2h-9.8V2.8c0.1-0.7,0.6-1.2,1.3-1.2h11.4l-1.5,3.2
         c-0.1,0.5-0.8,1.2-2.2,1.2h-3.5c-0.6,0-1,0.4-1,1v12.7h6.6c-0.5,1.1-1.2,2.9-1.4,3.2c-0.3,0.5-0.9,1.2-2.3,1.2h-1.8
         c-0.5,0-1,0.5-1,1V40H122.7z" />
-                                            <path d="M155,44.3c-1,0-1.2-0.6-1.3-0.9l-3-18.2h-2.4v19.2h-4.4V1.6h7.6c3,0,5.6,2.4,5.6,5.4v11c0,2.5-0.7,4.6-2.3,5.9l3.4,20.4
+                                                <path d="M155,44.3c-1,0-1.2-0.6-1.3-0.9l-3-18.2h-2.4v19.2h-4.4V1.6h7.6c3,0,5.6,2.4,5.6,5.4v11c0,2.5-0.7,4.6-2.3,5.9l3.4,20.4
         H155z M150.6,21c1.2,0,2.1-0.9,2.3-2.1V7.7c-0.1-1.2-1.1-2.1-2.3-2.1h-2.3V21H150.6z" />
-                                            <path d="M194.3,44.3h-2c-2.4,0-2.7-1.9-2.9-2.7l-4.7-21.1v23.9h-4.4V1.6h2c2.4,0,2.9,1.2,3.1,2.4l4.5,22.2V1.6h4.4L194.3,44.3
+                                                <path d="M194.3,44.3h-2c-2.4,0-2.7-1.9-2.9-2.7l-4.7-21.1v23.9h-4.4V1.6h2c2.4,0,2.9,1.2,3.1,2.4l4.5,22.2V1.6h4.4L194.3,44.3
         L194.3,44.3z" />
-                                            <path d="M231.3,44.3h-4.8l-3.8-29.4l-3.8,29.4h-4.8l6.4-42.7h2.4c1.8,0,2.1,1.2,2.3,2.3L231.3,44.3z" />
-                                            <path d="M265.1,39.3c0,2.9-2.4,5.1-5.2,5.2v0.1h-3.4c-3,0-5.4-2.3-5.4-5.2V2.8c0.1-0.7,0.6-1.2,1.3-1.2h3.1v36.9
+                                                <path d="M231.3,44.3h-4.8l-3.8-29.4l-3.8,29.4h-4.8l6.4-42.7h2.4c1.8,0,2.1,1.2,2.3,2.3L231.3,44.3z" />
+                                                <path d="M265.1,39.3c0,2.9-2.4,5.1-5.2,5.2v0.1h-3.4c-3,0-5.4-2.3-5.4-5.2V2.8c0.1-0.7,0.6-1.2,1.3-1.2h3.1v36.9
         c0,1.3,1,2.3,2.3,2.3h0.7c1.3,0,2.3-1,2.3-2.3V1.6h4.4L265.1,39.3L265.1,39.3z" />
-                                            <path d="M301.8,4.8c-0.2,0.5-0.9,1.2-2.3,1.2h-3.4c-0.6,0-1,0.5-1.1,1v37.3h-3.1c-1,0-1.2-0.6-1.2-0.9V5.9h-6.2v-3
+                                                <path d="M301.8,4.8c-0.2,0.5-0.9,1.2-2.3,1.2h-3.4c-0.6,0-1,0.5-1.1,1v37.3h-3.1c-1,0-1.2-0.6-1.2-0.9V5.9h-6.2v-3
         c0-0.7,0.6-1.3,1.3-1.3h17.4L301.8,4.8z" />
-                                            <path d="M325.6,1.6c1.3,0,1.8,1,1.8,1.7v41h-3.1c-1,0-1.2-0.6-1.3-0.9V1.6H325.6z" />
-                                            <path d="M365.5,39.3c0,2.9-2.3,5.3-5.2,5.4h-2.7c-3,0-5.5-2.4-5.5-5.4V6.6c0-3,2.4-5.4,5.5-5.4h2.7c2.9,0.1,5.2,2.5,5.2,5.4v6.5
+                                                <path d="M325.6,1.6c1.3,0,1.8,1,1.8,1.7v41h-3.1c-1,0-1.2-0.6-1.3-0.9V1.6H325.6z" />
+                                                <path d="M365.5,39.3c0,2.9-2.3,5.3-5.2,5.4h-2.7c-3,0-5.5-2.4-5.5-5.4V6.6c0-3,2.4-5.4,5.5-5.4h2.7c2.9,0.1,5.2,2.5,5.2,5.4v6.5
         c0,1.4-0.6,2.1-1.2,2.3l-3.2,1.5V7.3c0-1.3-1-2.3-2.4-2.3c-1.2,0-2.2,1-2.2,2.3v31.2c0,1.3,1,2.4,2.3,2.4s2.4-1,2.4-2.4v-5.7
         c0-1.4,0.6-2.1,1.2-2.4c0.4-0.2,2.1-0.9,3.2-1.4v10.3H365.5z" />
-                                        </g>
-                                    </svg>
-                                </div>
-                            </a>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </a>
+                            </div>
                         </div>
-                    </div>
-                    <div id="footer-bottom-address">
-                        <p>
-                            <span>2404 E. Empire Bloomington IL 61704</span>
-                            <span><a href="tel:3098278202">(309) 827-8202</a></span>
-                        </p>
-                    </div>
-                    <div id="footer-bottom-social">
-                        <ul>
-                            <li><a href="https://www.facebook.com/Techbits/">Facebook</a></li>
-                            <li>|</li>
-                            <li><a href="https://twitter.com/techbits">Twitter</a></li>
-                            <li>|</li>
-                            <li><a href="https://www.instagram.com/techbits/">Instagram</a></li>
-                            <li>|</li>
-                            <li><a href="https://www.linkedin.com/company/techbits-design/">Linkedin</a></li>
-                        </ul>
-                    </div>
-                    <div id="footer-bottom-links">
-                        <ul>
-                            <li><a href="/sitemap">Sitemap</a></li>
-                            <li><a href="/privacy">Privacy</a></li>
-                        </ul>
+                        <div id="footer-bottom-address">
+                            <p>
+                                <span>2404 E. Empire Bloomington IL 61704</span>
+                                <span><a href="tel:3098278202">(309) 827-8202</a></span>
+                            </p>
+                        </div>
+                        <div id="footer-bottom-social">
+                            <ul>
+                                <li><a href="https://www.facebook.com/Techbits/">Facebook</a></li>
+                                <li>|</li>
+                                <li><a href="https://twitter.com/techbits">Twitter</a></li>
+                                <li>|</li>
+                                <li><a href="https://www.instagram.com/techbits/">Instagram</a></li>
+                                <li>|</li>
+                                <li><a href="https://www.linkedin.com/company/techbits-design/">Linkedin</a></li>
+                            </ul>
+                        </div>
+                        <div id="footer-bottom-links">
+                            <ul>
+                                <li><a href="/sitemap">Sitemap</a></li>
+                                <li><a href="/privacy">Privacy</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </footer>
-    <section data-template="lets-talk-button" class="desktop-only">
-        <div class="gradient"></div>
-        <div class="max-width">
-            <a class="btn-red-circle" id="lets-talk-button" data-lets-talk-click-event="open">
-                <div>
-                    <small>Let's</small><span>Talk</span>
-                </div>
-            </a>
-        </div>
-    </section>
-    <div class="lets-talk-gradient"></div>
-    <section data-template="lets-talk-form">
-        <div class="cms-contact-form form">
+        </footer>
+        <section data-template="lets-talk-button" class="desktop-only">
+            <div class="gradient"></div>
             <div class="max-width">
-                <form data-form-template="more-information" data-block="724" data-original-block="725" autocomplete="off">
-                    <script type="application/json">
-                    { "id": "more-information", "messages": { "validating": "Validating and sending your message... ", "required_fields": "Please fill in all required fields.", "invalid_email": "E-mail address is invalid.", "success": "Thanks for your message!", "unknown_error": "Unknown error." } }
-                    </script>
-                    <div class="heading heading-4 main-heading">Okay, Let's Get Started</div>
-                    <div class="flexbox-row">
-                        <div class="flexbox-col form-item">
-                            <label for="more-information-first_name">First Name</label><input id="more-information-first_name" name="first_name" type="text" data-name="true" data-required="true" readonly />
-                        </div>
-                        <div class="flexbox-col form-item">
-                            <label for="more-information-last_name">Last Name</label><input id="more-information-last_name" name="last_name" type="text" data-name="true" data-required="true" readonly />
-                        </div>
-                        <div class="flexbox-col form-item">
-                            <label for="more-information-organization">Your Organization</label><input id="more-information-organization" name="organization" type="text" readonly />
-                        </div>
+                <a class="btn-red-circle" id="lets-talk-button" data-lets-talk-click-event="open">
+                    <div>
+                        <small>Let's</small><span>Talk</span>
                     </div>
-                    <div class="flexbox-row">
-                        <div class="flexbox-col form-item">
-                            <label for="more-information-email">Contact E-Mail</label><input id="more-information-email" name="email" type="email" data-email="true" data-required="true" readonly />
-                        </div>
-                        <div class="flexbox-col form-item">
-                            <label for="more-information-phone">Contact Phone</label><input id="more-information-phone" name="phone" type="text" inputmode="tel" data-required="true" readonly />
-                        </div>
-                        <div class="flexbox-col form-item">
-                            <label for="more-information-website">Your Current Website URL</label><input id="more-information-website" name="website" type="text" readonly />
-                        </div>
-                    </div>
-                    <div class="flexbox-row">
-                        <div class="flexbox-col form-item">
-                            <label for="more-information-message">What Can We Help You With?</label><textarea id="more-information-message" name="message" rows="5" readonly></textarea>
-                        </div>
-                    </div>
-                    <div class="flexbox-row">
-                        <div class="flexbox-col form-item">
-                            <label for="more-information-has_budget">What Is Your Budget?</label><select id="more-information-has_budget" name="has_budget" readonly>
-                                <option value="">Please Select An Answer</option>
-                                <option value="$3,000-$5,000">$3,000-$5,000</option>
-                                <option value="$6,000-$10,000">$6,000-$10,000</option>
-                                <option value="$10,000-$20,000">$10,000-$20,000</option>
-                                <option value="$20,000+">$20,000+</option>
-                            </select>
-                        </div>
-                        <div class="flexbox-col form-item">
-                            <label for="more-information-where_did_you_hear_about_us">Where Did You Hear About Us?</label><select id="more-information-where_did_you_hear_about_us" name="where_did_you_hear_about_us" readonly>
-                                <option value="">Please Select An Answer</option>
-                                <option value="Google">Google</option>
-                                <option value="Referral">Referral</option>
-                                <option value="Billboard">Billboard</option>
-                                <option value="Our Work">Our Work</option>
-                                <option value="Offline Advertisement">Offline Advertisement</option>
-                                <option value="Other">Other</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="flexbox-row">
-                        <div class="flexbox-col lets-talk-disclaimer">
-                            <p>By filling in this form, you are giving Techbits permission to contact you.</p>
-                        </div>
-                    </div>
-                    <div class="flexbox-row">
-                        <div class="flexbox-col lets-talk-buttons">
-                            <input type="hidden" name="form_id" value="More Information" />
-                            <div class="contact-form-message"></div>
-                            <a class="cms-btn cms-btn-primary contact-form-submit disabled" disabled>Submit</a>
-                        </div>
-                    </div>
-                </form>
+                </a>
             </div>
-            <div id="lets-talk-close-button" data-lets-talk-click-event="close" class="desktop-only">
-                <i><svg xmlns="http://www.w3.org/2000/svg" width="40" height="39" viewBox="0 0 40 39">
-                        <g fill="none" fill-rule="evenodd" stroke="#0C0C0D" stroke-linecap="square" stroke-width="4">
-                            <path d="M3.737 3.029L36.263 35.97M3.737 35.971L36.263 3.03" />
-                        </g>
-                    </svg>
-                </i>
+        </section>
+        <div class="lets-talk-gradient"></div>
+        <section data-template="lets-talk-form">
+            <div class="cms-contact-form form">
+                <div class="max-width">
+                    <form data-form-template="more-information" data-block="724" data-original-block="725" autocomplete="off">
+                        <script type="application/json">
+                        { "id": "more-information", "messages": { "validating": "Validating and sending your message... ", "required_fields": "Please fill in all required fields.", "invalid_email": "E-mail address is invalid.", "success": "Thanks for your message!", "unknown_error": "Unknown error." } }
+                        </script>
+                        <div class="heading heading-4 main-heading">Okay, Let's Get Started</div>
+                        <div class="flexbox-row">
+                            <div class="flexbox-col form-item">
+                                <label for="more-information-first_name">First Name</label><input id="more-information-first_name" name="first_name" type="text" data-name="true" data-required="true" readonly />
+                            </div>
+                            <div class="flexbox-col form-item">
+                                <label for="more-information-last_name">Last Name</label><input id="more-information-last_name" name="last_name" type="text" data-name="true" data-required="true" readonly />
+                            </div>
+                            <div class="flexbox-col form-item">
+                                <label for="more-information-organization">Your Organization</label><input id="more-information-organization" name="organization" type="text" readonly />
+                            </div>
+                        </div>
+                        <div class="flexbox-row">
+                            <div class="flexbox-col form-item">
+                                <label for="more-information-email">Contact E-Mail</label><input id="more-information-email" name="email" type="email" data-email="true" data-required="true" readonly />
+                            </div>
+                            <div class="flexbox-col form-item">
+                                <label for="more-information-phone">Contact Phone</label><input id="more-information-phone" name="phone" type="text" inputmode="tel" data-required="true" readonly />
+                            </div>
+                            <div class="flexbox-col form-item">
+                                <label for="more-information-website">Your Current Website URL</label><input id="more-information-website" name="website" type="text" readonly />
+                            </div>
+                        </div>
+                        <div class="flexbox-row">
+                            <div class="flexbox-col form-item">
+                                <label for="more-information-message">What Can We Help You With?</label><textarea id="more-information-message" name="message" rows="5" readonly></textarea>
+                            </div>
+                        </div>
+                        <div class="flexbox-row">
+                            <div class="flexbox-col form-item">
+                                <label for="more-information-has_budget">What Is Your Budget?</label><select id="more-information-has_budget" name="has_budget" readonly>
+                                    <option value="">Please Select An Answer</option>
+                                    <option value="$3,000-$5,000">$3,000-$5,000</option>
+                                    <option value="$6,000-$10,000">$6,000-$10,000</option>
+                                    <option value="$10,000-$20,000">$10,000-$20,000</option>
+                                    <option value="$20,000+">$20,000+</option>
+                                </select>
+                            </div>
+                            <div class="flexbox-col form-item">
+                                <label for="more-information-where_did_you_hear_about_us">Where Did You Hear About Us?</label><select id="more-information-where_did_you_hear_about_us" name="where_did_you_hear_about_us" readonly>
+                                    <option value="">Please Select An Answer</option>
+                                    <option value="Google">Google</option>
+                                    <option value="Referral">Referral</option>
+                                    <option value="Billboard">Billboard</option>
+                                    <option value="Our Work">Our Work</option>
+                                    <option value="Offline Advertisement">Offline Advertisement</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="flexbox-row">
+                            <div class="flexbox-col lets-talk-disclaimer">
+                                <p>By filling in this form, you are giving Techbits permission to contact you.</p>
+                            </div>
+                        </div>
+                        <div class="flexbox-row">
+                            <div class="flexbox-col lets-talk-buttons">
+                                <input type="hidden" name="form_id" value="More Information" />
+                                <div class="contact-form-message"></div>
+                                <a class="cms-btn cms-btn-primary contact-form-submit disabled" disabled>Submit</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div id="lets-talk-close-button" data-lets-talk-click-event="close" class="desktop-only">
+                    <i><svg xmlns="http://www.w3.org/2000/svg" width="40" height="39" viewBox="0 0 40 39">
+                            <g fill="none" fill-rule="evenodd" stroke="#0C0C0D" stroke-linecap="square" stroke-width="4">
+                                <path d="M3.737 3.029L36.263 35.97M3.737 35.971L36.263 3.03" />
+                            </g>
+                        </svg>
+                    </i>
+                </div>
             </div>
-        </div>
-    </section>
-    <script type="text/javascript" src="{% static 'core/js/vendor.js' %}"></script>
-    <script type="text/javascript" src="{% static 'core/js/cms.js' %}"></script>
-    <script type="text/javascript" src="{% static 'core/js/app.js' %}"></script>
-    <script type="text/javascript" src="{% static 'core/js/widget.js' %}"></script>
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "LocalBusiness",
-        "name": "Techbits Web Design",
-        "image": "https://d3dpix5tqb3tqh.cloudfront.net/image/2",
-        "sameAs": [
-            "https://www.facebook.com/Techbits/",
-            "https://www.linkedin.com/company/techbits-design/",
-            "https://www.topdesignfirms.com/directory/usa/illinois/normal/techbits-web-design",
-            "https://springfieldwebdesigners.com/",
-            "https://champaignwebdesigners.com/"
-        ],
-        "url": "{% url 'index' %}",
-        "telephone": "(309) 827-8202",
-        "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "2404 E Empire St",
-            "addressLocality": "Bloomington",
-            "addressRegion": "IL",
-            "postalCode": "61701",
-            "addressCountry": "US"
+        </section>
+        <script type="text/javascript" src="{% static 'core/js/vendor.js' %}"></script>
+        <script type="text/javascript" src="{% static 'core/js/cms.js' %}"></script>
+        <script type="text/javascript" src="{% static 'core/js/app.js' %}"></script>
+        <script type="text/javascript" src="{% static 'core/js/widget.js' %}"></script>
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "Techbits Web Design",
+            "image": "https://d3dpix5tqb3tqh.cloudfront.net/image/2",
+            "sameAs": [
+                "https://www.facebook.com/Techbits/",
+                "https://www.linkedin.com/company/techbits-design/",
+                "https://www.topdesignfirms.com/directory/usa/illinois/normal/techbits-web-design",
+                "https://springfieldwebdesigners.com/",
+                "https://champaignwebdesigners.com/"
+            ],
+            "url": "{% url 'index' %}",
+            "telephone": "(309) 827-8202",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "2404 E Empire St",
+                "addressLocality": "Bloomington",
+                "addressRegion": "IL",
+                "postalCode": "61701",
+                "addressCountry": "US"
+            }
         }
-    }
-    </script>
-</body>
+        </script>
+    </body>
 
 </html>

@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+
+{% block meta %}
+<meta property="og:title" content="Custom Web Design | Techbits" />
+<meta property="og:description" content="Get a custom-designed website by Techbits. Our custom web design solutions offer you a reliable and user-friendly site to propel your business forward." />
+<meta property="og:image:alt" content="Get a custom-designed website by Techbits. Our custom web design solutions offer you a reliable and user-friendly site to propel your business forward." />
+<meta property="og:image:width" content="64" />
+<meta property="og:image:height" content="64" />
+<meta itemprop="name" content="Custom Web Design | Techbits">
+<meta itemprop="description" content="Get a custom-designed website by Techbits. Our custom web design solutions offer you a reliable and user-friendly site to propel your business forward.">
+
+{% endblock meta %}
+{% block title %}
+{{ service.name }}
+{% endblock title %}
+{% block content %}
+<section id="interior-content" class="" data-page-id="1013">
+    <section data-block="60" data-type="amsd" data-profile="false" data-layout="vertical-list" data-table="strings" data-columns="2" class="amsd">
+        <div data-template="page-heading">
+            <div class="page-heading-wrapper">
+                <div class="bg-color {{ service.header_color }} has-iphone-preview">
+                    <style type="text/css">
+                    [data-block="60"] .iphone-preview {
+                        background-image: url("{{ service.header_image.url }}");
+                    }
+
+                    [data-block="60"] .client-name {
+                        text-shadow: 0 0 12px #e2d182;
+                    }
+                    </style>
+                    <div class="gradient"></div>
+                    <div class="wrapper">
+                        <div class="client-name heading heading-7 desktop-only">LYNX GRILLS</div>
+                        <div class="max-width">
+                            <div class="iphone-preview-wrapper">
+                                <div class="iphone-preview"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="page-heading-content has-iphone-preview">
+                    <div class="wrapper max-width">
+                        <div class="flexbox-row headings-wrapper">
+                            <div class="flexbox-col">
+                                <div class="heading heading-1 large-heading">
+                                    <h1> {{ service.name }}<br class="sm-and-down" /></h1>
+                                </div>
+                                <div class="heading heading-4 small-heading">{{ service.sub_title }}</div>
+                            </div>
+                        </div>
+                        <div class="flexbox-row text-columns-wrapper">
+                            <div class="flexbox-col page-heading-column-one">
+                                <div class="text md-and-up">
+                                    {{ service.header_description|safe }}
+                                </div>
+                            </div>
+                            <div class="flexbox-col"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="md-and-down page-heading-small-screen-text">
+                    <div class="wrapper">
+                        <div class="text">
+                            {{ service.header_description|safe }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="clr"></div>
+    {{ service.body|safe }}
+</section>
+{% endblock content %}
