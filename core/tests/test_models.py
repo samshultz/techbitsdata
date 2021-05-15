@@ -1,4 +1,4 @@
-from .models import HomePage
+from ..models import HomePage
 
 
 def test_str_representation_of_homepage(db):

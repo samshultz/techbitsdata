@@ -105,7 +105,7 @@
                                             <ul class="nav-submenu" data-level="3">
                                                 {% for service in category.services.all %}
                                                 <li class="" data-level="3" data-page-id="1013">
-                                                    <a href="" class="" data-level="3">{{ service.name }}</a>
+                                                    <a href="{{ service.get_absolute_url }}" class="" data-level="3">{{ service.name }}</a>
                                                 </li>
                                                 {% endfor %}
                                             </ul>
@@ -234,7 +234,7 @@
                                                     {% for service in category.services.all %}
 
                                                     <li>
-                                                        <a href="/services/web-design/custom-web-design">{{ service.name }}</a>
+                                                        <a href="{{ service.get_absolute_url }}">{{ service.name }}</a>
                                                     </li>
 
                                                     {% endfor %}

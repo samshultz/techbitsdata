@@ -9,11 +9,6 @@ class Portfolio(models.Model):
     url = models.URLField()
     location = models.CharField(max_length=30, blank=True, null=True)
     logo = models.ImageField(upload_to="portfolio/logo/", null=True, blank=True)
-
-    position = models.CharField(max_length=10, blank=True, null=True)
-    row = models.CharField(max_length=10, blank=True, null=True)
-    size = models.CharField(max_length=30, blank=True, null=True)
-    column = models.CharField(max_length=30, blank=True, null=True)
     
     def __str__(self):
         return self.name

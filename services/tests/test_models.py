@@ -10,6 +10,9 @@ def create_service(db):
 def test_str_representation_of_service(create_service):
     assert "Web design" == str(create_service)
 
+def test_service_get_absolute_url(create_service):
+    assert "/services/web-design/" == create_service.get_absolute_url()
+
 def test_slug_automatically_created(create_service):
     assert "web-design" == create_service.slug
 

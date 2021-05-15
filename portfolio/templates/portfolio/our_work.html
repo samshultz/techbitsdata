@@ -39,11 +39,13 @@ Case Studies | Techbits
         <div id="interior-content-blocks" tabindex="-1" data-tab-element="-1">
             <section data-block="287" data-template="case-studies-list" data-type="amsd" data-profile="false" data-layout="custom" data-columns="2" class="amsd">
                 <div class="mobile-column-max-width">
-                    {% for project in projects %}
-                    {% if project.row == 'first-row' or project.row == 'next-row' %}
+                    {% for group in project_group %}
+
                     <div class="flexbox-row">
-                        {% endif %}
-                        <div class="flexbox-col" data-size="{{ project.size }}" data-position="{{ project.position }}" data-theme="dark">
+                        {% for project in group %}
+
+
+                        <div class="flexbox-col" data-size="{% cycle 'large' 'small' 'small' 'large' %}" data-position="{% cycle 'left' 'center' 'center' 'right' %}" data-theme="dark">
                             <div class="case-study-padding">
                                 <div class="case-study {% cycle 'bg-color-sandy' 'bg-color-brownish-grey' 'bg-color-pale-olive-green' 'bg-color-light-grey-blue' 'bg-color-orange-red' 'bg-color-black' 'bg-color-brownish-grey' %}" data-case-study="1093">
                                     <div class="heading-wrapper">
@@ -78,9 +80,9 @@ Case Studies | Techbits
                             </div>
 
                         </div>
-                        {% if project.column == 'second-column' %}
+                        {% endfor %}
                     </div>
-                    {% endif %}
+
                     {% endfor %}
 
                     <div class="case-studies-around-the-world">

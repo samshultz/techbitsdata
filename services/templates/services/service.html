@@ -21,7 +21,7 @@
                 <div class="bg-color {{ service.header_color }} has-iphone-preview">
                     <style type="text/css">
                     [data-block="60"] .iphone-preview {
-                        background-image: url("{{ service.header_image.url }}");
+                        background-image: url("{% if service.header_image %}{{ service.header_image.url }}{% endif %}");
                     }
 
                     [data-block="60"] .client-name {
