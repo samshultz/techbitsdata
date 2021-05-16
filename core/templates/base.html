@@ -1,5 +1,6 @@
 {% load static %}
 {% load service_tags %}
+{% load core_tags %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,8 +22,7 @@
         <meta itemprop="name" content="Real Estate Web Design - TechBitsData">
         <meta itemprop="description" content="TechBitsData solutions is an industry leader in real estate web design. Fully custom real estate websites with database integration & property search. Contact us today.">
 
-        {% endblock meta %}
-        <style type="text/css">
+        {% endblock meta %} <style type="text/css">
         #content-wrapper {
             opacity: 0;
             -webkit-transition: opacity 100ms cubic-bezier(0.4, 0, 1, 1);
@@ -123,6 +123,17 @@
 
                                             </ul>
                                         </li>
+                                    </ul>
+                                </li>
+
+                                <li class="nav-has-children" data-level="1" data-page-id="1029"><i data-level="1" class="subpage-indicator fas fa-chevron-down"></i><a class="" data-level="1">Industry Solutions</a>
+                                    <ul class="nav-submenu" data-level="2">
+                                        {% get_homepages as homepages %}
+                                        {% for page in homepages %}
+                                        <li class="tag-industry" data-level="2" data-page-id="1032"><a href="{{ page.get_absolute_url }}" class="" data-level="2">{{ page.name|capfirst }}</a></li>
+
+                                        {% endfor %}
+
                                     </ul>
                                 </li>
                                 <li class="nav-has-children" data-level="1" data-page-id="1099"><i data-level="1" class="subpage-indicator fas fa-chevron-down"></i><a class="" data-level="1">About</a>
@@ -274,36 +285,13 @@
                                     <div class="subnav-section subnav-section-featured">
                                         <div class="subnav-section-inner">
                                             <ul data-columns="3">
+                                                {% get_homepages as homepages %}
+                                                {% for page in homepages %}
                                                 <li>
-                                                    <a href="real-estate-web-design.html">Real Estate</a>
+                                                    <a href="{{ page.get_absolute_url }}">{{ page.name|capfirst }}</a>
                                                 </li>
-                                                <li>
-                                                    <a href="healthcare-web-design.html">Healthcare</a>
-                                                </li>
-                                                <li>
-                                                    <a href="non-profit-web-design.html">Non-Profit</a>
-                                                </li>
-                                                <li>
-                                                    <a href="agriculture-web-design.html">Agriculture</a>
-                                                </li>
-                                                <li>
-                                                    <a href="education-web-design.html">Education</a>
-                                                </li>
-                                                <li>
-                                                    <a href="construction-web-design.html">Construction</a>
-                                                </li>
-                                                <li>
-                                                    <a href="restaurant-web-design.html">Restaurant</a>
-                                                </li>
-                                                <li>
-                                                    <a href="finance-and-bank-web-design.html">Finance</a>
-                                                </li>
-                                                <li>
-                                                    <a href="luxury-web-design.html">Luxury</a>
-                                                </li>
-                                                <li>
-                                                    <a href="landscaping.html">Landscaping</a>
-                                                </li>
+                                                {% endfor %}
+
                                             </ul>
                                         </div>
                                     </div>

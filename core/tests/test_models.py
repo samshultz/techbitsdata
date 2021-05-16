@@ -8,3 +8,7 @@ def test_str_representation_of_homepage(db):
 def test_slug_automatically_filled_in(db):
     homepage = HomePage.objects.create(name="Real Estate")
     assert "real-estate" == homepage.slug
+
+def test_get_absolute_url_homepage(db):
+    homepage = HomePage.objects.create(name="Real Estate")
+    assert "/real-estate/" == homepage.get_absolute_url()
