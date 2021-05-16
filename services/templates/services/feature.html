@@ -1,0 +1,160 @@
+{% extends "base.html" %}
+
+{% block title %}
+{{ feature.name }} - Techbits
+{% endblock title %}
+
+{% block meta %}
+<meta property="og:url" content="{{ feature.get_absolute_url }}" />
+<meta property="og:title" content="{{ feature.name }}" />
+<meta property="og:description" content="Add a customer employment application to your new website with Techbits Solutions. We make it easy for potential employees to apply for open positions at your business." />
+<meta itemprop="name" content="{{ feature.name }}">
+<meta itemprop="description" content="Add a customer employment application to your new website with Techbits solutions. We make it easy for potential employees to apply for open positions at your business.">
+
+{% endblock meta %}
+
+{% block content %}
+<section id="interior-content" class="" data-page-id="1091">
+    <section data-block="660" data-type="amsd" data-profile="false" data-layout="vertical-list" data-table="strings" data-columns="2" class="amsd">
+        <div data-template="page-heading">
+            <div class="page-heading-wrapper">
+                <div class="bg-color {{ feature.header_color }} has-iphone-preview">
+                    <style type="text/css">
+                    [data-block="660"] .iphone-preview {
+                        background-image: url("{% if feature.header_img %}{{ feature.header_img.url }}{% endif %}");
+                    }
+
+                    [data-block="660"] .client-name {
+                        text-shadow: 0 0 12px #a6e26c;
+                    }
+                    </style>
+                    <div class="gradient"></div>
+                    <div class="wrapper">
+                        <div class="max-width">
+                            <div class="iphone-preview-wrapper">
+                                <div class="iphone-preview"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="page-heading-content has-iphone-preview">
+                    <div class="wrapper max-width">
+                        <div class="flexbox-row headings-wrapper">
+                            <div class="flexbox-col">
+                                <div class="heading heading-1 large-heading">{{ feature.header_title }}<br class="md-and-down"></div>
+                                <div class="heading heading-4 small-heading">{{ feature.header_subtitle }}</div>
+                            </div>
+                        </div>
+                        <div class="flexbox-row text-columns-wrapper">
+                            <div class="flexbox-col page-heading-column-one">
+                                <div class="text md-and-up">
+                                    {{ feature.header_description|safe }}
+                                </div>
+                            </div>
+                            <div class="flexbox-col"></div>
+                        </div>
+                        <div class="flexbox-row buttons-wrapper md-and-up">
+                            <div class="flexbox-col">
+                                <div class="button"><a href="" class="cms-btn cms-btn-primary">Schedule a Demo</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="md-and-down page-heading-small-screen-text">
+                    <div class="wrapper">
+                        <div class="text">
+                            {{ feature.header_description|safe }}
+                        </div>
+                        <div class="buttons-wrapper">
+                            <div class="button"><a href="" class="cms-btn cms-btn-primary">Schedule a Demo</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <div class="clr"></div>
+    <div class="wrapper">
+        <div id="interior-content-blocks" tabindex="-1" data-tab-element="-1">
+            <section data-block="662" data-type="amsd" data-profile="false" data-layout="vertical-list" data-table="strings" data-columns="2" class="amsd">
+                <div data-template="text-one-column">
+                    <div class="max-width alignment-left">
+                        <div class="heading heading-2 block-title">{{ feature.features_list_title }}</div>
+                        <div class="text">
+                            <p>{{ feature.features_list_description }}:</p>
+                        </div>
+                        <div class="list ol-li-numbers">
+                            <div class="flexbox-row">
+                                {% for group in feature_item_groups %}
+                                <div class="flexbox-col">
+                                    <ol>
+                                        {% with forloop.counter as count %}
+
+
+                                        {% for feature_item in group %}
+                                        <li>
+
+
+                                            <span class="icon-width">
+                                                {% if count < 2 %} {{ forloop.counter }} {% else %} {{ forloop.counter|add:"4"}} {% endif %} </span> <span class="heading heading-7">{{ feature_item.name }}</span>
+                                        </li>
+                                        {% endfor %}
+                                        {% endwith %}
+                                    </ol>
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section data-block="830" data-type="amsd" data-profile="false" data-layout="vertical-list" data-table="strings" data-columns="2" class="amsd">
+                <div data-template="full-width-background-w-text-overlay">
+                    <style type="text/css">
+                    #full-width-background-830.lazy-loaded {
+                        background-image: url('{% if feature.banner %}{{ feature.banner.url }}{% endif %}');
+                        background-position: center center;
+                    }
+
+                    @media screen and (min-width: 1000px) {
+                        #full-width-background-830.lazy-loaded {
+                            background-image: url(https://d3dpix5tqb3tqh.cloudfront.net/image/353/2000);
+                            background-position: center center;
+                        }
+                    }
+
+                    @media screen and (min-width: 2000px) {
+                        #full-width-background-830.lazy-loaded {
+                            background-image: url(https://d3dpix5tqb3tqh.cloudfront.net/image/353/3000);
+                            background-position: center center;
+                        }
+                    }
+                    </style>
+                    <style type="text/css">
+                    #full-width-background-830 {
+                        padding-bottom: 65.513663092356%;
+                    }
+
+                    @media (max-width: 640px) {
+                        #full-width-background-830 {
+                            padding-bottom: 65.513663092356%;
+                        }
+                    }
+                    </style>
+                    <div id="full-width-background-830" class="full-width-background" data-lazy-load-responsive-photo></div>
+                    <div class="overlay overlay-position-bottom-left bg-color-lightblue">
+                        {{ feature.body|safe }}
+                        <div class="button"><a href="" class="cms-btn cms-btn-primary">I'm Ready To See This</a></div>
+
+                    </div>
+                </div>
+            </section>
+
+
+        </div>
+    </div>
+
+
+</section>
+{% endblock content %}

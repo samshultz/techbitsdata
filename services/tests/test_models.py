@@ -1,5 +1,5 @@
 import pytest
-from ..models import Service, Feature, Category
+from ..models import Service, Feature, Category, FeatureItem
 
 @pytest.fixture
 def create_service(db):
@@ -31,3 +31,12 @@ def test_str_representation_of_category(db):
 def test_verbose_name_plural_of_category(db):
     cat = Category._meta.verbose_name_plural
     assert "Categories" == cat
+
+def test_str_representation_of_feature_item(db):
+    feature = Feature.objects.create(name="Online Payments Processing")
+    feature_item = FeatureItem.objects.create(feature=feature, name="online payments")
+    assert "online payments" == str(feature_item)
+
+def test_get_absolute_url_of_feature(db):
+    feature = Feature.objects.create(name="Online Payments Processing")
+    assert "/services/features/online-payments-processing/" == feature.get_absolute_url()

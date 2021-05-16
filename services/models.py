@@ -43,12 +43,18 @@ class Service(models.Model):
 
 class Feature(models.Model):
     name = models.CharField(max_length=100)
-    sub_title = models.CharField(max_length=150)
     slug = models.SlugField(max_length=200)
 
+    features_list_title = models.CharField(max_length=30, blank=True, null=True)
+    features_list_description = models.CharField(max_length=255, blank=True, null=True)
+
+    header_title = models.CharField(max_length=100, default="")
+    header_subtitle = models.CharField(max_length=150, default="")
     header_description = RichTextField()
     header_img = models.ImageField(upload_to="features")
     header_color = models.CharField(max_length=50)
+
+    banner = models.ImageField(upload_to='banner', blank=True, null=True)
 
     body = RichTextField(config_name="service_editor")
 
@@ -62,4 +68,15 @@ class Feature(models.Model):
         return super(Feature, self).save(*args, **kwargs)
 
     def get_absolute_url(self):
-        return ('')
+        return reverse('services:feature_detail', args={self.slug})
+
+
+class FeatureItem(models.Model):
+    feature = models.ForeignKey(Feature, related_name='feature_items', on_delete=models.CASCADE)
+    name = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        ordering = "-id",
