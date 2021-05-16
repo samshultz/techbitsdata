@@ -1,0 +1,868 @@
+/*
+
+   ____              __              __  ____                                   __
+  / __/______  ___  / /____ ___  ___/ / / __/______ ___ _  ___ _    _____  ____/ /__
+ / _// __/ _ \/ _ \/ __/ -_) _ \/ _  / / _// __/ _ `/  ' \/ -_) |/|/ / _ \/ __/  '_/
+/_/ /_/  \___/_//_/\__/\__/_//_/\_,_/ /_/ /_/  \_,_/_/_/_/\__/|__,__/\___/_/ /_/\_\
+
+------------------------------------------------------------------------------------
+
+This file contains presets and fallbacks for common elements in a
+Cybernautic frontend.  It's here to catch anything that doesn't make it
+into the individual site's CSS.
+
+*/
+
+.clr {
+    clear: both;
+}
+
+.no-select {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.box-sizing {
+    -webkit-box-sizing: border-box;
+    /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;
+    /* Firefox, other Gecko */
+    box-sizing: border-box;
+    /* Opera/IE 8+ */
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.floatLeft {
+    float: left;
+}
+
+.floatRight {
+    float: right;
+}
+
+/*
+
+CKEditor/Texbox - positioned elements
+------------------------------------------------------------------------------------
+
+*/
+
+.imgLeft,
+figure.image-with-caption.imgLeft {
+    position: relative;
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+
+.imgRight,
+figure.image-with-caption.imgRight {
+    position: relative;
+    float: right;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+.imgBanner,
+figure.image-with-caption.imgBanner {
+    position: relative;
+}
+
+.imgLeft img,
+img.imgLeft,
+.imgRight img,
+img.imgRight,
+.imgBanner img,
+img.imgBanner {
+    height: auto;
+}
+
+@media (max-width: 640px) {
+
+    .imgLeft,
+    .imgRight,
+    .imgBanner {
+        width: 100%;
+        float: none;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 10px;
+    }
+
+}
+
+/*
+
+Superscript/Subscript
+------------------------------------------------------------------------------------
+
+*/
+
+sup,
+sub {
+    vertical-align: baseline;
+    position: relative;
+    top: -0.4em;
+}
+
+sub {
+    top: 0.4em;
+}
+
+/*
+
+Sitemap lists
+------------------------------------------------------------------------------------
+
+*/
+
+.block ul,
+.block ol {
+    margin-left: 25px;
+}
+
+.block ul,
+.block ul ul ul ul,
+.block ul ul ul ul ul ul ul {
+    list-style-type: disc;
+}
+
+.block ul ul,
+.block ul ul ul ul ul,
+.block ul ul ul ul ul ul ul ul {
+    list-style-type: circle;
+}
+
+.block ul ul ul,
+.block ul ul ul ul ul ul,
+.block ul ul ul ul ul ul ul ul ul {
+    list-style-type: square;
+}
+
+.block ol,
+.block ol ol ol ol,
+.block ol ol ol ol ol ol ol {
+    list-style-type: decimal;
+}
+
+.block ol ol,
+.block ol ol ol ol ol,
+.block ol ol ol ol ol ol ol ol {
+    list-style-type: lower-alpha;
+}
+
+.block ol ol ol,
+.block ol ol ol ol ol ol,
+.block ol ol ol ol ol ol ol ol ol {
+    list-style-type: lower-roman;
+}
+
+
+.block ul li,
+.block ol li {
+    list-style-position: outside;
+}
+
+.block ul li>ul,
+.block ol li>ol {
+    margin-top: 5px;
+}
+
+.block ul li .subMenu {
+    margin-left: 20px;
+}
+
+li h1,
+li h2,
+li h3,
+li h4,
+li h5,
+li h6 {
+    display: inline;
+}
+
+.ie9 li h1,
+.ie9 li h2,
+.ie9 li h3,
+.ie9 li h4,
+.ie9 li h5,
+.ie9 li h6 {
+    display: inline;
+    position: relative;
+    top: 2px;
+}
+
+.elipsis {
+    display: inline-block;
+}
+
+/*
+
+Benchmarking
+------------------------------------------------------------------------------------
+
+*/
+
+#benchmarking {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    z-index: 9999999;
+}
+
+/*
+
+Video Embeds
+------------------------------------------------------------------------------------
+
+*/
+
+.cms-video {
+    position: relative;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.cms-video *,
+.cms-video *:before,
+.cms-video *:after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+}
+
+.cms-video-16x10 {
+    padding-bottom: 62.25%;
+}
+
+.cms-video-16x9 {
+    padding-bottom: 56.25%;
+}
+
+.cms-video-4x3 {
+    padding-bottom: 75%;
+}
+
+.cms-video iframe,
+.cms-video .cms-video-placeholder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    z-index: 5;
+}
+
+.cms-video .cms-video-placeholder {
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    z-index: 10;
+}
+
+.cms-video-youtube .cms-video-placeholder-title {
+    font-size: 110%;
+    overflow: hidden;
+    white-space: nowrap;
+    word-wrap: normal;
+    padding: 13px 15px;
+    text-shadow: 0 0 2px rgba(0, 0, 0, .5);
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+}
+
+.cms-video-vimeo .cms-video-placeholder-top {
+
+    color: #fff;
+    font-family: "Helvetica Neue", Helvetica, Arial !important;
+    padding: 15px 10px;
+
+}
+
+.cms-video-vimeo .cms-video-placeholder-top a {
+
+    color: rgb(0, 173, 239);
+    text-decoration: none;
+
+}
+
+.cms-video-vimeo .cms-video-placeholder-top .cms-video-placeholder-title {
+
+    background: rgba(23, 35, 34, .75);
+    padding: 5px 8px;
+    font-size: 20px;
+    display: inline-block;
+    max-width: calc(100% - 62px);
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+}
+
+.cms-video-vimeo .cms-video-placeholder-top .cms-video-placeholder-user-name {
+
+    background: rgba(23, 35, 34, .75);
+    padding: 4px 8px;
+    margin-top: 2px;
+    font-size: 12px;
+    display: inline-block;
+
+}
+
+.cms-video-vimeo .cms-video-placeholder-top a {
+
+    font-weight: 700;
+
+}
+
+.cms-video-vimeo .cms-video-placeholder-user-icon {
+
+    background: rgba(23, 35, 34, .75);
+    width: 60px;
+    height: 60px;
+    margin-right: 1px;
+    float: left;
+
+}
+
+.cms-video-vimeo .cms-video-placeholder-user-icon img {
+
+    border: 0;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    padding: .5em;
+
+}
+
+.cms-video-vimeo .cms-video-placeholder button {
+
+    z-index: 6;
+
+    margin: -20px 0 0 -33px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: 66px;
+    height: 40px;
+    color: #fff;
+    -webkit-transition: opacity 250ms ease-out, background-color 40ms, color 40ms;
+    transition: opacity 250ms ease-out, background-color 40ms, color 40ms;
+
+    outline: 0 !important;
+
+    background: rgba(23, 35, 34, .75);
+    border-radius: 5px;
+
+    padding: 0;
+
+    border: 0 !important;
+
+    font-family: "Helvetica Neue", Helvetica, Arial;
+
+    cursor: pointer;
+    font-size: 1em;
+
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+
+}
+
+.cms-video-vimeo:hover .cms-video-placeholder button {
+
+    background: #1ab7ea;
+
+}
+
+.cms-video-vimeo .cms-video-placeholder button .tiny-bars {
+
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    border-radius: .5em;
+
+    color: #fff;
+
+}
+
+.cms-video-vimeo .cms-video-placeholder button .play-icon {
+
+    display: block;
+    margin: 0 auto;
+    padding: 8px 0 0 5px;
+
+}
+
+.cms-video-vimeo .cms-video-placeholder button .play-icon svg {
+
+    width: 20px;
+    height: 20px;
+    outline: 0 !important;
+
+}
+
+.cms-video-vimeo .cms-video-placeholder button .play-icon svg .fill {
+
+    -webkit-transition: fill 40ms;
+    transition: fill 40ms;
+    fill: #fff;
+
+}
+
+
+.cms-video-vimeo .cms-video-placeholder button .pause-icon {
+
+    display: none;
+    margin: 0 auto;
+    padding: 8px 0 0 5px;
+
+}
+
+.cms-video-youtube .cms-video-placeholder button {
+
+    cursor: pointer;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 68px;
+    height: 48px;
+    margin-left: -34px;
+    margin-top: -24px;
+    -moz-transition: opacity .25s cubic-bezier(0.0, 0.0, 0.2, 1);
+    -webkit-transition: opacity .25s cubic-bezier(0.0, 0.0, 0.2, 1);
+    transition: opacity .25s cubic-bezier(0.0, 0.0, 0.2, 1);
+
+    outline: 0;
+
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    color: inherit;
+    text-align: inherit;
+    font-size: 100%;
+    font-family: inherit;
+    cursor: default;
+    line-height: inherit;
+
+}
+
+.cms-video-youtube .cms-video-placeholder button svg {
+    pointer-events: none;
+}
+
+.cms-video-youtube .cms-video-placeholder button svg .play-button-bg {
+    -moz-transition: fill .1s cubic-bezier(0.4, 0.0, 1, 1), fill-opacity .1s cubic-bezier(0.4, 0.0, 1, 1);
+    -webkit-transition: fill .1s cubic-bezier(0.4, 0.0, 1, 1), fill-opacity .1s cubic-bezier(0.4, 0.0, 1, 1);
+    transition: fill .1s cubic-bezier(0.4, 0.0, 1, 1), fill-opacity .1s cubic-bezier(0.4, 0.0, 1, 1);
+    fill: #1f1f1f;
+    fill-opacity: .81;
+}
+
+.cms-video-youtube:hover .cms-video-placeholder button svg .play-button-bg {
+    fill: #e52d27;
+    fill-opacity: 1;
+}
+
+@media screen and (max-width: 415px) {
+
+    .cms-video .cms-video-placeholder-top {
+        display: none;
+    }
+
+}
+
+/*
+
+Customsearch
+------------------------------------------------------------------------------------
+
+*/
+
+[data-module="cms-custom-search"] {
+    position: relative;
+    padding: 30px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+[data-module="cms-custom-search"] * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+[data-module="cms-custom-search"] .cms-custom-search-meta {
+    font-size: 12px;
+    font-style: italic;
+    margin-bottom: 20px;
+    text-align: right;
+}
+
+[data-module="cms-custom-search"] .cms-custom-search-result {
+    position: relative;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+}
+
+[data-module="cms-custom-search"] .cms-custom-search-result-image {
+    margin-bottom: 20px;
+}
+
+@media screen and (min-width: 640px) {
+
+    [data-module="cms-custom-search"] .cms-custom-search-result-image {
+        width: 200px;
+        float: left;
+        margin-right: 30px;
+        margin-bottom: 0;
+    }
+
+    [data-module="cms-custom-search"] .cms-custom-search-result-image img {
+        width: 100%;
+    }
+
+    [data-module="cms-custom-search"] .cms-custom-search-result-text {
+        width: calc(100% - 230px);
+        float: left;
+    }
+
+}
+
+[data-module="cms-custom-search"] .cms-custom-search-result:last-child {
+    border-bottom: 0;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+[data-module="cms-custom-search"] .cms-custom-search-result .cms-custom-search-result-title {
+    display: block;
+    margin-bottom: 10px;
+}
+
+[data-module="cms-custom-search"] .cms-custom-search-result .cms-custom-search-result-sub-title {
+    display: block;
+    margin-bottom: 20px;
+    font-size: 11px;
+}
+
+[data-module="cms-custom-search"] .cms-custom-search-result p {
+    font-size: 13px;
+    font-style: italic;
+}
+
+[data-module="cms-custom-search"] .form-wrapper {
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    text-align: center;
+}
+
+[data-module="cms-custom-search"] .form-wrapper form {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+}
+
+[data-module="cms-custom-search"] .form-wrapper form input[type='text'] {
+    background: #eee;
+    width: 100%;
+    padding-right: 40px;
+}
+
+[data-module="cms-custom-search"] .form-wrapper form button {
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+/*
+
+Focused Images
+------------------------------------------------------------------------------------
+
+*/
+
+.focuspoint {
+    position: relative;
+    overflow: hidden;
+}
+
+.focuspoint img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 0;
+    display: block;
+    /* fill and maintain aspect ratio */
+    width: auto;
+    height: auto;
+    min-width: 100%;
+    min-height: 100%;
+    max-height: none;
+    max-width: none;
+}
+
+/*
+
+Cybernautic Tag / SEO
+------------------------------------------------------------------------------------
+
+*/
+
+ul#cms-seo-footer-links {
+    list-style: none;
+}
+
+ul#cms-seo-footer-links li {
+    display: inline-block;
+}
+
+ul#cms-seo-footer-links li.cms-seo-footer-links-pipe {
+    padding: 0 5px;
+}
+
+/*
+
+Userway
+------------------------------------------------------------------------------------
+
+*/
+
+.uwy,
+body .uwy {
+    bottom: 0;
+}
+
+body div.uwy div.uai {
+    position: absolute !important;
+    transform: none !important;
+}
+
+/** -------------------------------------------------------------- //
+
+Paragraph Styles
+--
+
+*/
+
+.paragraph-extra-small {
+
+    font-size: 65%;
+
+}
+
+.paragraph-small {
+
+    font-size: 80%;
+
+}
+
+.paragraph-large {
+
+    font-size: 120%;
+
+}
+
+.paragraph-extra-large {
+
+    font-size: 135%;
+
+}
+
+/** -------------------------------------------------------------- //
+
+Textbox Columns
+--
+
+*/
+
+.textbox-columns {
+    width: 100%;
+}
+
+/** Desktop ------------------ */
+
+@media (min-width: 993px) {
+
+    /** Default Cell Padding ------------------ */
+
+    .textbox-columns-wrapper {
+        margin-left: -20px;
+        margin-right: -20px;
+    }
+
+    .textbox-columns td {
+        vertical-align: top;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    /** No Cell Padding ------------------ */
+
+    [data-textbox-columns-padding="none"] {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    [data-textbox-columns-padding="none"] td {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    /** Small Cell Padding ------------------ */
+
+    [data-textbox-columns-padding="small"] {
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+
+    [data-textbox-columns-padding="small"] td {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    /** Medium Cell Padding ------------------ */
+
+    [data-textbox-columns-padding="medium"] {
+        margin-left: -30px;
+        margin-right: -30px;
+    }
+
+    [data-textbox-columns-padding="medium"] td {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    /** Large Cell Padding ------------------ */
+
+    [data-textbox-columns-padding="large"] {
+        margin-left: -50px;
+        margin-right: -50px;
+    }
+
+    [data-textbox-columns-padding="large"] td {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    /** Extra Large Cell Padding ------------------ */
+
+    [data-textbox-columns-padding="extra-large"] {
+        margin-left: -65px;
+        margin-right: -65px;
+    }
+
+    [data-textbox-columns-padding="extra-large"] td {
+        padding-left: 65px;
+        padding-right: 65px;
+    }
+
+    /** Fixed Width Columns ------------------ */
+
+    .textbox-columns-fixed-width[data-textbox-columns="2"] td {
+
+        width: 50% !important;
+
+    }
+
+    .textbox-columns-fixed-width[data-textbox-columns="3"] td {
+
+        width: 33.3333333333333% !important;
+
+    }
+
+    .textbox-columns-fixed-width[data-textbox-columns="4"] td {
+
+        width: 25% !important;
+
+    }
+
+}
+
+/** Mobile ------------------ */
+
+@media (max-width: 992px) {
+
+    .textbox-columns td {
+        display: block;
+        width: 100% !important;
+        padding: 0 0 23px;
+    }
+
+    .textbox-columns td:last-child {
+        padding-bottom: 0;
+    }
+
+}
+
+/** -------------------------------------------------------------- //
+
+Textbox Images with Caption
+--
+
+*/
+
+figure.image-with-caption {
+
+    text-align: center;
+    outline: solid 1px #ccc;
+    background: rgba(0, 0, 0, 0.05);
+    padding: 10px;
+    margin: auto;
+    display: inline-block;
+
+}
+
+figure.image-with-caption figcaption {
+
+    text-align: center;
+    display: block;
+    padding-top: 5px;
+
+}
+
+figure.image-with-caption img {
+
+    max-width: 100%;
+    height: auto;
+    font-size: 85%;
+
+}
