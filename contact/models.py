@@ -16,11 +16,14 @@ class ContactInfo(models.Model):
 
 
 class Contact(models.Model):
-    fullname = models.CharField(max_length=50)
-    email = models.EmailField()
-    phone = models.CharField(max_length=15, blank=True, null=True)
+    firstname = models.CharField(max_length=50)
+    lastname = models.CharField(max_length=50)
+    organization = models.CharField(max_length=150)
+    contact_email = models.EmailField(blank=True)
+    contact_phone = models.CharField(max_length=16)
+    current_website_url = models.URLField(blank=True)
     message = models.TextField()
 
 
     def __str__(self):
-        return self.fullname
+        return f"{self.firstname} {self.lastname}"

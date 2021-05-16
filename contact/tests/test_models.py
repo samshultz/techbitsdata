@@ -1,7 +1,7 @@
 from ..models import Contact, ContactInfo
 
 def test_str_representation_of_contact(db):
-    contact = Contact.objects.create(fullname="John Doe")
+    contact = Contact.objects.create(firstname="John", lastname="Doe")
     assert "John Doe" == str(contact)
 
 def test_str_representation_of_contact_info(db):

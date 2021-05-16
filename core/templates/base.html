@@ -1,6 +1,8 @@
 {% load static %}
 {% load service_tags %}
 {% load core_tags %}
+{% load contact_tags %}
+{% load widget_tweaks %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -565,60 +567,49 @@
         <section data-template="lets-talk-form">
             <div class="cms-contact-form form">
                 <div class="max-width">
-                    <form data-form-template="more-information" data-block="724" data-original-block="725" autocomplete="off">
+                    <form data-form-template="more-information" data-block="724" data-original-block="725" autocomplete="off" method="post" action="{% url 'contact:contact-us' %}">
+                        {% csrf_token %}
                         <script type="application/json">
                         { "id": "more-information", "messages": { "validating": "Validating and sending your message... ", "required_fields": "Please fill in all required fields.", "invalid_email": "E-mail address is invalid.", "success": "Thanks for your message!", "unknown_error": "Unknown error." } }
                         </script>
                         <div class="heading heading-4 main-heading">Okay, Let's Get Started</div>
                         <div class="flexbox-row">
+                            {% get_contact_form as contact_form %}
                             <div class="flexbox-col form-item">
-                                <label for="more-information-first_name">First Name</label><input id="more-information-first_name" name="first_name" type="text" data-name="true" data-required="true" readonly />
+                                <label for="more-information-first_name">First Name</label>
+                                {% render_field contact_form.firstname|attr:"id:more-information-first_name"|set_data:"name:true"|set_data:"required:true" %}
+
                             </div>
                             <div class="flexbox-col form-item">
-                                <label for="more-information-last_name">Last Name</label><input id="more-information-last_name" name="last_name" type="text" data-name="true" data-required="true" readonly />
+                                <label for="more-information-last_name">Last Name</label>
+                                {% render_field contact_form.lastname|attr:"id:more-information-last_name"|set_data:"name:true"|set_data:"required:true" %}
                             </div>
                             <div class="flexbox-col form-item">
-                                <label for="more-information-organization">Your Organization</label><input id="more-information-organization" name="organization" type="text" readonly />
-                            </div>
-                        </div>
-                        <div class="flexbox-row">
-                            <div class="flexbox-col form-item">
-                                <label for="more-information-email">Contact E-Mail</label><input id="more-information-email" name="email" type="email" data-email="true" data-required="true" readonly />
-                            </div>
-                            <div class="flexbox-col form-item">
-                                <label for="more-information-phone">Contact Phone</label><input id="more-information-phone" name="phone" type="text" inputmode="tel" data-required="true" readonly />
-                            </div>
-                            <div class="flexbox-col form-item">
-                                <label for="more-information-website">Your Current Website URL</label><input id="more-information-website" name="website" type="text" readonly />
+                                <label for="more-information-organization">Your Organization</label>
+                                {% render_field contact_form.organization|attr:"id:more-information-organization" %}
                             </div>
                         </div>
                         <div class="flexbox-row">
                             <div class="flexbox-col form-item">
-                                <label for="more-information-message">What Can We Help You With?</label><textarea id="more-information-message" name="message" rows="5" readonly></textarea>
+                                <label for="more-information-email">Contact E-Mail</label>
+                                {% render_field contact_form.contact_email|attr:"id:more-information-email"|set_data:"name:true"|set_data:"required:true" %}
+                            </div>
+                            <div class="flexbox-col form-item">
+                                <label for="more-information-phone">Contact Phone</label>
+                                {% render_field contact_form.contact_phone|attr:"id:more-information-phone"|set_data:"name:true"|set_data:"required:true"|attr:"inputmode:tel" %}
+                            </div>
+                            <div class="flexbox-col form-item">
+                                <label for="more-information-website">Your Current Website URL</label>
+                                {% render_field contact_form.current_website_url|attr:"id:more-information-website" %}
                             </div>
                         </div>
                         <div class="flexbox-row">
                             <div class="flexbox-col form-item">
-                                <label for="more-information-has_budget">What Is Your Budget?</label><select id="more-information-has_budget" name="has_budget" readonly>
-                                    <option value="">Please Select An Answer</option>
-                                    <option value="$3,000-$5,000">$3,000-$5,000</option>
-                                    <option value="$6,000-$10,000">$6,000-$10,000</option>
-                                    <option value="$10,000-$20,000">$10,000-$20,000</option>
-                                    <option value="$20,000+">$20,000+</option>
-                                </select>
-                            </div>
-                            <div class="flexbox-col form-item">
-                                <label for="more-information-where_did_you_hear_about_us">Where Did You Hear About Us?</label><select id="more-information-where_did_you_hear_about_us" name="where_did_you_hear_about_us" readonly>
-                                    <option value="">Please Select An Answer</option>
-                                    <option value="Google">Google</option>
-                                    <option value="Referral">Referral</option>
-                                    <option value="Billboard">Billboard</option>
-                                    <option value="Our Work">Our Work</option>
-                                    <option value="Offline Advertisement">Offline Advertisement</option>
-                                    <option value="Other">Other</option>
-                                </select>
+                                <label for="more-information-message">What Can We Help You With?</label>
+                                {% render_field contact_form.message|attr:"id:more-information-message"|attr:"rows:5" %}
                             </div>
                         </div>
+
                         <div class="flexbox-row">
                             <div class="flexbox-col lets-talk-disclaimer">
                                 <p>By filling in this form, you are giving Techbits permission to contact you.</p>
@@ -628,7 +619,7 @@
                             <div class="flexbox-col lets-talk-buttons">
                                 <input type="hidden" name="form_id" value="More Information" />
                                 <div class="contact-form-message"></div>
-                                <a class="cms-btn cms-btn-primary contact-form-submit disabled" disabled>Submit</a>
+                                <input type="submit" class="cms-btn cms-btn-primary contact-form-submit" value="Submit">
                             </div>
                         </div>
                     </form>
