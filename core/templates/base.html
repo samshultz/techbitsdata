@@ -138,21 +138,17 @@
 
                                     </ul>
                                 </li>
-                                <li class="nav-has-children" data-level="1" data-page-id="1099"><i data-level="1" class="subpage-indicator fas fa-chevron-down"></i><a class="" data-level="1">About</a>
-                                    <ul class="nav-submenu" data-level="2">
-                                        <li class="" data-level="2" data-page-id="1111"><a href="" class="" data-level="2">Our Locations</a></li>
-                                        <li class="" data-level="2" data-page-id="1004"><a href="" class="" data-level="2">Our Team</a></li>
-                                        <li class="" data-level="2" data-page-id="1324"><a href="" class="last" data-level="2">Our Reviews</a></li>
-                                    </ul>
-                                </li>
-                                <li class="" data-level="1" data-page-id="1005"><a href="" class="" data-level="1">Let's Get Started</a></li>
+
+                                <li class="" data-level="1" data-page-id="1005"><a href="{% url 'contact:contact-us' %}" class="" data-level="1">Let's Get Started</a></li>
                                 <li class="mobile-only nav-has-children tag-more" data-level="1" data-page-id="0"><i data-level="1" class="subpage-indicator fas fa-chevron-down"></i><a class="last" data-level="1">More</a>
                                     <ul class="nav-submenu" data-level="2">
-                                        <li class="" data-level="2" data-page-id="1007"><a href="" class="" data-level="2">Blog</a></li>
-                                        <li class="" data-level="2" data-page-id="1008"><a href="" class="" data-level="2">Contact</a></li>
-                                        <li class="" data-level="2" data-page-id="1009"><a href="" class="" data-level="2">Careers</a></li>
-                                        <li class="" data-level="2" data-page-id="1010"><a href="" class="" data-level="2">Support</a></li>
-                                        <li class="" data-level="2" data-page-id="1011"><a href="" class="last" data-level="2">Billing</a></li>
+                                        <li class="" data-level="2" data-page-id="1007">
+                                            <a href="" class="" data-level="2">Blog</a>
+                                        </li>
+                                        <li class="" data-level="2" data-page-id="1008">
+                                            <a href="{% url 'contact:contact-us' %}" class="" data-level="2">Contact</a>
+                                        </li>
+                                        
                                     </ul>
                                 </li>
                             </ul>
@@ -299,25 +295,6 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="subnav" data-parent-id="1099">
-                                <div class="subnav-inner">
-                                    <div class="subnav-section subnav-section-featured">
-                                        <div class="subnav-section-inner">
-                                            <ul data-columns="1">
-                                                <li>
-                                                    <a href="/about/our-locations">Our Locations</a>
-                                                </li>
-                                                <li>
-                                                    <a href="/about/our-team">Our Team</a>
-                                                </li>
-                                                <li>
-                                                    <a href="/about/our-reviews">Our Reviews</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </section>
                 </section>
@@ -381,56 +358,15 @@
             <div id="footer-sitemap">
                 <div class="wrapper">
                     <div id="footer-sitemap-sections">
-                        <div class="footer-sitemap-section">
-                            <div class="heading heading-8">Cities</div>
-                            <ul class="footer-sitemap-section-links" data-columns="1">
-                                <li>
-                                    <a href="/web-design/custom-web-designers-peoria">Web Designers in Peoria, IL</a>
-                                </li>
-                                <li>
-                                    <a href="/web-design/custom-web-designers-champaign-il">Web Designers in Champaign, IL</a>
-                                </li>
-                                <li>
-                                    <a href="/web-design/custom-web-designers-chicago-il">Web Designers in Chicago, IL</a>
-                                </li>
-                                <li>
-                                    <a href="/web-design/custom-web-designers-bloomington-il">Web Designers in Bloomington, IL</a>
-                                </li>
-                            </ul>
-                        </div>
+                        {% get_homepages as homepages %}
                         <div class="footer-sitemap-section">
                             <div class="heading heading-8"><a href="/industry-solutions">Industry Solutions</a></div>
                             <ul class="footer-sitemap-section-links" data-columns="2">
-                                <li>
-                                    <a href="healthcare-web-design.html">Healthcare</a>
-                                </li>
-                                <li>
-                                    <a href="real-estate-web-design.html">Real Estate</a>
-                                </li>
-                                <li>
-                                    <a href="non-profit-web-design.html">Non-Profit</a>
-                                </li>
-                                <li>
-                                    <a href="agriculture-web-design.html">Agriculture</a>
-                                </li>
-                                <li>
-                                    <a href="education-web-design.html">Education</a>
-                                </li>
-                                <li>
-                                    <a href="construction-web-design.html">Construction</a>
-                                </li>
-                                <li>
-                                    <a href="restaurant-web-design.html">Restaurant</a>
-                                </li>
-                                <li>
-                                    <a href="luxury-web-design.html">Luxury</a>
-                                </li>
-                                <li>
-                                    <a href="finance-and-bank-web-design.html">Finance</a>
-                                </li>
-                                <li>
-                                    <a href="landscaping.html">Landscaping</a>
-                                </li>
+                                {% for page in homepages %}
+                                    <li>
+                                        <a href="{{ page.get_absolute_url }}">{{ page.name }}</a>
+                                    </li>
+                                {% endfor %}
                             </ul>
                         </div>
                         <div class="footer-sitemap-section">
@@ -441,15 +377,6 @@
                                 </li>
                                 <li>
                                     <a href="/contact">Contact</a>
-                                </li>
-                                <li>
-                                    <a href="https://careers.techbits.com/">Careers</a>
-                                </li>
-                                <li>
-                                    <a href="https://techbits.freshdesk.com/">Support</a>
-                                </li>
-                                <li>
-                                    <a href="https://billing.techbitsdesign.com/">Billing</a>
                                 </li>
                             </ul>
                         </div>
@@ -526,29 +453,37 @@
                                 </a>
                             </div>
                         </div>
+                        {% get_contact_info as contact_info %}
+
+                        {% if contact_info %}
+                            
                         <div id="footer-bottom-address">
                             <p>
-                                <span>2404 E. Empire Bloomington IL 61704</span>
-                                <span><a href="tel:3098278202">(309) 827-8202</a></span>
+                                <span>{{ contact_info.address }}</span>
+                                <span><a href="tel:3098278202">{{ contact_info.phone }}</a></span>
                             </p>
                         </div>
+                        {% if contact_info.facebook_url or contact_info.twitter_url or contact_info.linkedin_url %}
+                            
                         <div id="footer-bottom-social">
                             <ul>
-                                <li><a href="https://www.facebook.com/Techbits/">Facebook</a></li>
+                                {% if contact_info.facebook_url %}
+                                    
+                                <li><a href="{{ contact_info.facebook_url }}">Facebook</a></li>
+                                {% endif %}
+                                {% if contact_info.twitter_url %}
                                 <li>|</li>
-                                <li><a href="https://twitter.com/techbits">Twitter</a></li>
+                                <li><a href="{{ contact_info.twitter_url }}">Twitter</a></li>
+                                {% endif %}
+                                {% if contact_info.linkedin_url %}
                                 <li>|</li>
-                                <li><a href="https://www.instagram.com/techbits/">Instagram</a></li>
-                                <li>|</li>
-                                <li><a href="https://www.linkedin.com/company/techbits-design/">Linkedin</a></li>
+                                <li><a href="{{ contact_info.linkedin_url }}">Linkedin</a></li>
+                                {% endif %}
                             </ul>
                         </div>
-                        <div id="footer-bottom-links">
-                            <ul>
-                                <li><a href="/sitemap">Sitemap</a></li>
-                                <li><a href="/privacy">Privacy</a></li>
-                            </ul>
-                        </div>
+                        {% endif %}
+                        {% endif %}
+
                     </div>
                 </div>
             </div>
