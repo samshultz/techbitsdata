@@ -1,1 +1,140 @@
 {% extends "base.html" %}
+{% load widget_tweaks %}
+{% load static %}
+{% block title %}
+    Contact Us - Techbits Data Solutions
+{% endblock title %}
+
+
+{% block meta %}
+    <meta property="og:url" content="{% url 'contact:contact-us' %}" />
+    <meta property="og:title" content="Contact Us - Techbits Data Solutions" />
+    <meta property="og:description" content="Looking for custom web design, SEO, or pay-per-click ad services? Contact Techbits data solutions. Quality design." />
+    <meta itemprop="name" content="Contact Us - Techbits Data Solutions Web Design"">
+    <meta itemprop="description" content="Looking for custom web design, SEO, or pay-per-click ad services? Contact Techbits Data Solutions". Quality design.">
+{% endblock meta %} 
+
+{% block content %}
+      <section id="interior-content" class="" data-page-id="1008">
+                <section data-block="211" data-type="amsd" data-profile="false" data-layout="vertical-list" data-table="strings" data-columns="2" class="amsd pull-into-nav">
+                    <div data-template="page-heading-behind-menu">
+                        <style type="text/css">
+                        [data-block="211"] .background-photo {
+                            background-image: url("{% static 'contact/img/office.jpg' %}");
+                            background-position: 40% 22%;
+                        }
+
+                        @media screen and (min-width: 1000px) {
+                            [data-block="211"] .background-photo {
+                                background-image: url("{% static 'contact/img/office.jpg' %}");
+                                background-position: 40% 22%;
+                            }
+                        }
+
+                        @media screen and (min-width: 2000px) {
+                            [data-block="211"] .background-photo {
+                                background-image: url("{% static 'contact/img/office.jpg' %}");
+                                background-position: 40% 22%;
+                            }
+                        }
+                        </style>
+                        <div class="outer-wrapper">
+                            <div class="background-photo">
+                                <div class="page-heading-content">
+                                    <div class="bg-color bg-color-bright-cyan"></div>
+                                    <div class="max-width">
+                                        <div class="heading heading-1 large-heading">Contact Us</div>
+                                        <div class="text">
+                                            <p><span class="heading heading-4">{{ contact_info.address }}<br />
+                                                    {{ contact_info.phone }}</span></p>
+                                        </div>
+                                        {% if contact_info.facebook_url or contact_info.address.twitter_url or contact_info.linkedin_url %}
+                                        <div class="social">
+                                            <div class="heading heading-7 social-heading">Follow Us</div>
+                                            <div class="social-links">
+                                                {% if contact_info.facebook_url %}
+                                                    <a href="{{ contact_info.facebook_url }}" title="">
+                                                        <i class="fab fa-facebook"></i>
+                                                    </a>
+                                                {% endif %}
+                                                {% if contact_info.twitter_url %}
+                                                    <a href="{{ contact_info.twitter_url }}" title="">
+                                                        <i class="fab fa-twitter"></i>
+                                                    </a>
+                                                {% endif %}
+                                                {% if contact_info.linkedin_url %}
+                                                    <a href="{{ contact_info.linkedin_url }}" title="">
+                                                        <i class="fab fa-linkedin"></i>
+                                                    </a>
+                                                {% endif %}
+                                            </div>
+                                        </div>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div class="clr"></div>
+                <div class="wrapper">
+                    <div id="interior-content-blocks" tabindex="-1" data-tab-element="-1">
+                        <section data-block="1370" data-type="amsd" data-profile="false" data-layout="vertical-list" data-table="strings" data-columns="2" class="amsd">
+                            <div data-template="quick-lead-capture">
+                                <div class="max-width cms-contact-form form">
+                                    <form data-form-template="quick-lead-capture" data-block="724" data-original-block="1370" autocomplete="off" method="post" action="{% url 'contact:contact-us' %}">
+                                        <script type="application/json">
+                                        { "id": "quick-lead-capture", "messages": { "validating": "Validating and sending your message... ", "required_fields": "Please fill in all required fields.", "invalid_email": "E-mail address is invalid.", "success": "Thanks for your message!", "unknown_error": "Unknown error." } }
+                                        </script>
+                                        {% csrf_token %}
+                                        <div class="heading heading-2">Get In Touch</div>
+                                        
+                                        {% with WIDGET_ERROR_CLASS='form-invalid' %}
+                                        <div class="flexbox-row">
+                                            <div class="flexbox-col form-item">
+                                                <label for="quick-lead-capture-first_name">First Name</label>
+                                                {% render_field form.firstname|attr:"id:quick-lead-capture-first_name"|set_data:"name:true"|set_data:"required:true"|attr:"readonly" %}
+                                            </div>
+                                            <div class="flexbox-col form-item">
+                                                <label for="quick-lead-capture-last_name">Last Name</label>
+                                                {% render_field form.lastname|attr:"id:quick-lead-capture-last_name"|set_data:"name:true"|set_data:"required:true"|attr:"readonly" %}
+                                            </div>
+                                            <div class="flexbox-col form-item">
+                                                <label for="quick-lead-capture-organization">Your Organization</label>
+                                                {% render_field form.organization|attr:"id:quick-lead-capture-organization"|attr:"readonly" %}
+                                            </div>
+                                        </div>
+                                        <div class="flexbox-row">
+                                            <div class="flexbox-col form-item">
+                                                <label for="quick-lead-capture-email">Contact E-Mail</label>
+                                                {% render_field form.contact_email|attr:"id:quick-lead-capture-email"|set_data:"email:true"|set_data:"required:true"|attr:"readonly" %}
+                                            </div>
+                                            <div class="flexbox-col form-item">
+                                                <label for="quick-lead-capture-phone">Contact Phone</label>
+                                                {% render_field form.contact_phone|attr:"id:quick-lead-capture-phone"|attr:"inputmode:tel"|set_data:"required:true"|attr:"readonly" %}
+                                            </div>
+                                        </div>
+                                        <div class="flexbox-row">
+                                            <div class="flexbox-col form-item">
+                                                <label for="quick-lead-capture-message">What Can We Help You With?</label>
+                                                {% render_field form.message|attr:"id:quick-lead-capture-message"|attr:"readonly" %}
+                                                
+                                            </div>
+                                        </div>
+                                        {% endwith %}
+                                        <div class="flexbox-row form-submit">
+                                            <div class="flexbox-col form-item">
+                                                <input type="hidden" name="form_id" value="Quick Lead Capture" />
+                                                <button type="submit" class="cms-btn contact-form-submit cms-btn-primary color-black border-color-black">Get In Touch</button>
+                                                <span class="contact-form-message"></span>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </section>
+
+                    </div>
+                </div>
+            </section>
+  {% endblock content %}  

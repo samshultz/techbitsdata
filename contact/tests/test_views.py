@@ -1,8 +1,12 @@
+import time
+
 from django.test import TestCase
 from django.urls import reverse
 from django.utils.html import escape
+from django.core import mail
 
 from ..forms import ContactForm
+from ..models import ContactInfo, Contact
 
 
 class ContactFormViewTest(TestCase):
@@ -26,16 +30,36 @@ class ContactFormViewTest(TestCase):
         self.assertEqual(resp.status_code, 200)
         self.assertTemplateUsed(resp, "contact/contact.html")
 
-    # def test_validation_errors_are_shown_on_page(self):
+    def test_for_contact_info_in_context(self):
+    
+        resp = self.client.get(reverse("contact:contact-us"))
+        
+        self.assertIn('contact_info', resp.context)
 
-    #     data = {
-    #         'firstname': "",
-    #         'lastname': "Doe",
-    #         'organization': "Posyhub",
-    #         'contact_phone': "3498378563",
-    #         'current_website_url': '',
-    #         'message': "How do you do it"
-    #     }
+    def test_validation_errors_are_shown_on_page(self):
 
-    #     resp = self.client.post(reverse("contact:contact-us"), data=data)
-    #     self.assertContains(resp, escape("You must Enter your First Name"))
+        data = {
+            'firstname': "",
+            'lastname': "Doe",
+            'organization': "Posyhub",
+            'contact_phone': "3498378563",
+            'current_website_url': '',
+            'message': "How do you do it"
+        }
+
+        resp = self.client.post(reverse("contact:contact-us"), data=data)
+        self.assertContains(resp, "form-invalid")
+
+    def test_valid_form_saves_to_db(self):
+        data = {
+            'firstname': "John",
+            'lastname': "Doe",
+            'organization': "Posyhub",
+            'contact_phone': "3498378563",
+            'current_website_url': '',
+            'message': "How do you do it"
+        }
+
+        resp = self.client.post(reverse("contact:contact-us"), data=data)
+        contact = Contact.objects.first()
+        self.assertEqual(str(contact), "John Doe")

@@ -76,13 +76,6 @@ class ContactFormTest(TestCase):
             ["Enter your Last Name"]
         )
 
-    def test_organization_errors_contain_custom_error_messages(self):
-        form = self.set_single_form_field_value_to_empty_string('organization')
-        self.assertEqual(
-            form.errors['organization'],
-            ["Enter the name of your Organization or Business"]
-        )
-
     def test_phone_errors_contain_custom_error_messages(self):
         form = self.set_single_form_field_value_to_empty_string('contact_phone')
         self.assertEqual(
