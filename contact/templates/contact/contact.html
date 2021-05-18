@@ -14,6 +14,36 @@
     <meta itemprop="description" content="Looking for custom web design, SEO, or pay-per-click ad services? Contact Techbits Data Solutions". Quality design.">
 {% endblock meta %} 
 
+{% block extra-style %}
+    <style type="text/css">
+        #display-error {
+            width: 100%;
+            border: 1px solid #D8D8D8;
+            padding: 5px;
+            border-radius: 5px;
+            font-family: Arial;
+            font-size: 11px;
+            text-transform: uppercase;
+            background-color: rgb(255, 249, 242);
+            color: rgb(211, 0, 0);
+            text-align: left;
+        }
+
+        #display-success {
+            width: 100%;
+            border: 1px solid #D8D8D8;
+            padding: 10px;
+            border-radius: 5px;
+            font-family: Arial;
+            font-size: 11px;
+            text-transform: uppercase;
+            background-color: rgb(236, 255, 216);
+            color: green;
+            text-align: center;
+            margin-top: 30px;
+        }
+    </style>
+{% endblock extra-style %}
 {% block content %}
       <section id="interior-content" class="" data-page-id="1008">
                 <section data-block="211" data-type="amsd" data-profile="false" data-layout="vertical-list" data-table="strings" data-columns="2" class="amsd pull-into-nav">
@@ -88,7 +118,32 @@
                                         </script>
                                         {% csrf_token %}
                                         <div class="heading heading-2">Get In Touch</div>
-                                        
+                                            {% if form.errors %}
+                                                <div id="display-error">
+                                                        <ul>
+                                                            {% for field in form %}
+                                                                {% for error in field.errors %}
+                                                                    <li>
+                                                                        <strong>{{ error|escape }}</strong>
+                                                                    </li>
+                                                                {% endfor %}
+                                                            {% endfor %}
+                                                            {% for error in form.non_field_errors %}
+                                                                <li>
+                                                                    <strong>{{ error|escape }}</strong>
+                                                                </li>
+                                                            {% endfor %}
+                                                        </ul>
+                                                </div>
+                                            {% endif %}
+
+                                            {% if messages %}
+                                                <div id="display-success">
+                                                    {% for msg in messages %}
+                                                        {{ msg }}
+                                                    {% endfor %}
+                                                </div>
+                                            {% endif %}
                                         {% with WIDGET_ERROR_CLASS='form-invalid' %}
                                         <div class="flexbox-row">
                                             <div class="flexbox-col form-item">

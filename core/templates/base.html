@@ -41,6 +41,10 @@
         <link rel="stylesheet" href="{% static 'core/css/cms-frontend-framework.css' %}" type="text/css" />
         <link rel="stylesheet" href="{% static 'core/css/base.css' %}" type="text/css" />
         <link rel="stylesheet" href="{% static 'core/css/vendor.css' %}" type="text/css" />
+
+        {% block extra-style %}
+            
+        {% endblock extra-style %}
         <script id="config-json" type="application/json">
         { "is_testlink": false, "site_title": "Techbits Website Design", "popup_form_template_name": "lets-talk", "colors": { "black": "#161616", "bright-cyan": "#4dc1fb", "bright-light-blue": "#20feee", "bright-orange": "#f45b0f", "brown-grey": "#9b9b9b", "brownish-grey": "#5c5c5c", "carnation": "#ff7796", "cerulean": "#048ecb", "dark": "#0c0c0d", "dark-navy-blue": "#01002d", "dusty-orange": "#fe7820", "light-grey": "#e8e8e8", "light-grey-blue": "#94c0d4", "lightblue": "#74d1ff", "greyish-brown": "#434343", "mustard": "#dcb500", "orange-red": "#fe3120", "orangeish": "#fb8b4d", "pale-olive-green": "#a6e26c", "peach": "#ffc486", "purply-pink": "#fa77ff", "sandy": "#e2d182", "strong-pink": "#fe20a6", "sun-yellow": "#ffd726", "very-light-pink": "#d7d7d7", "even-lighter-pink": "#f0f0f0", "white": "#ffffff" }, "cookies": { "fingerprint": "fingerprint", "utm": "utm" }, "utm_parameters": ["utm_source", "utm_medium", "utm_campaign", "gclid", "fbclid"], "cloudfront_distribution_url": "d3dpix5tqb3tqh.cloudfront.net", "recaptcha_site_key": "6LcOk-QZAAAAADg_2j1DlXz0jjVhZ2nXGusp6BTk" }
         </script>

@@ -49,6 +49,21 @@ class ContactFormViewTest(TestCase):
 
         resp = self.client.post(reverse("contact:contact-us"), data=data)
         self.assertContains(resp, "form-invalid")
+        self.assertContains(resp, "You must Enter your First Name")
+
+    def test_success_message_are_shown_on_page_on_valid_form_submit(self):
+
+        data = {
+            'firstname': "Jon",
+            'lastname': "Doe",
+            'organization': "Posyhub",
+            'contact_phone': "3498378563",
+            'current_website_url': '',
+            'message': "How do you do it"
+        }
+
+        resp = self.client.post(reverse("contact:contact-us"), data=data, follow=True)
+        self.assertContains(resp, "Your message has been sent successfully.")
 
     def test_valid_form_saves_to_db(self):
         data = {
