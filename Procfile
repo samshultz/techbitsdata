@@ -1,1 +1,1 @@
-web: python manage.py collectstatic --no-input; gunicorn techbitsdata.wsgi
+web: python manage.py collectstatic --no-input; gunicorn techbitsdata.wsgi --preload
