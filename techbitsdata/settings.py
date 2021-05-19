@@ -39,9 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'cloudinary_storage',
+    # 'cloudinary_storage',
     'django.contrib.staticfiles',
-    'cloudinary',
+    # 'cloudinary',
 
     'about.apps.AboutConfig',
     'portfolio.apps.PortfolioConfig',
@@ -57,7 +57,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    # 'whitenoise.middleware.WhiteNoiseMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -137,16 +137,16 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media/'
 
 # CLOUDINARY SETTINGS
-CLOUDINARY_STORAGE = {
-    'CLOUD_NAME': env('CLOUDINARY_CLOUD_NAME'),
-    'API_KEY': env('CLOUDINARY_API_KEY'),
-    'API_SECRET': env('CLOUDINARY_API_SECRET')
-}
+# CLOUDINARY_STORAGE = {
+#     'CLOUD_NAME': env('CLOUDINARY_CLOUD_NAME'),
+#     'API_KEY': env('CLOUDINARY_API_KEY'),
+#     'API_SECRET': env('CLOUDINARY_API_SECRET')
+# }
 
-if not DEBUG:
+# if not DEBUG:
 
-    DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
-    STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
+#     DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+#     STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
