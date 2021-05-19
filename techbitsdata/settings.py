@@ -8,7 +8,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Initialise environment variables
 env = environ.Env(
-    DEBUG=(bool, False)
+    DEBUG=(bool, False),
+    USE_S3=(bool, True)
 )
 environ.Env.read_env()
 
@@ -52,6 +53,7 @@ INSTALLED_APPS = [
     'ckeditor',
     'ckeditor_uploader',
     'widget_tweaks',
+    'storages',
     'django_cleanup.apps.CleanupConfig',
 ]
 
@@ -130,11 +132,31 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
+USE_S3 = env('USE_S3')
 
-STATIC_URL = '/static/'
-STATIC_ROOT = BASE_DIR / 'static/'
-MEDIA_URL = '/media/'
-MEDIA_ROOT = BASE_DIR / 'media/'
+if USE_S3:
+    # aws settings
+    AWS_ACCESS_KEY_ID = env('AWS_ACCESS_KEY_ID')
+    AWS_SECRET_ACCESS_KEY = env('AWS_SECRET_ACCESS_KEY')
+    AWS_STORAGE_BUCKET_NAME = env('AWS_STORAGE_BUCKET_NAME')
+    AWS_DEFAULT_ACL = None
+    AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
+    AWS_S3_OBJECT_PARAMETERS = {'CacheControl': 'max-age=86400'}
+    # s3 static settings
+    STATIC_LOCATION = 'static'
+    STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATIC_LOCATION}/'
+    STATICFILES_STORAGE = 'techbitsdata.storage_backends.StaticStorage'
+
+    #s3 public media settings
+    PUBLIC_MEDIA_LOCATION = 'media'
+    MEDIA_URL = f"https://{AWS_S3_CUSTOM_DOMAIN}/{PUBLIC_MEDIA_LOCATION}/"
+    DEFAULT_FILE_STORAGE = 'techbitsdata.storage_backends.PublicMediaStorage'
+else:
+    STATIC_URL = '/static/'
+    STATIC_ROOT = BASE_DIR / 'static/'
+    MEDIA_URL = '/media/'
+    MEDIA_ROOT = BASE_DIR / 'media/'
+
 
 # CLOUDINARY SETTINGS
 # CLOUDINARY_STORAGE = {
