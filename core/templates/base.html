@@ -24,20 +24,24 @@
         <meta itemprop="name" content="Real Estate Web Design - TechBitsData">
         <meta itemprop="description" content="TechBitsData solutions is an industry leader in real estate web design. Fully custom real estate websites with database integration & property search. Contact us today.">
 
-        {% endblock meta %} <style type="text/css">
-        #content-wrapper {
-            opacity: 0;
-            -webkit-transition: opacity 100ms cubic-bezier(0.4, 0, 1, 1);
-            -moz-transition: opacity 100ms cubic-bezier(0.4, 0, 1, 1);
-            -ms-transition: opacity 100ms cubic-bezier(0.4, 0, 1, 1);
-            -o-transition: opacity 100ms cubic-bezier(0.4, 0, 1, 1);
-            transition: opacity 100ms cubic-bezier(0.4, 0, 1, 1);
-        }
+        {% endblock meta %} 
 
-        html.loaded #content-wrapper {
-            opacity: 1;
-        }
+
+        <style type="text/css">
+            #content-wrapper {
+                opacity: 0;
+                -webkit-transition: opacity 100ms cubic-bezier(0.4, 0, 1, 1);
+                -moz-transition: opacity 100ms cubic-bezier(0.4, 0, 1, 1);
+                -ms-transition: opacity 100ms cubic-bezier(0.4, 0, 1, 1);
+                -o-transition: opacity 100ms cubic-bezier(0.4, 0, 1, 1);
+                transition: opacity 100ms cubic-bezier(0.4, 0, 1, 1);
+            }
+
+            html.loaded #content-wrapper {
+                opacity: 1;
+            }
         </style>
+
         <link rel="stylesheet" href="{% static 'core/css/cms-frontend-framework.css' %}" type="text/css" />
         <link rel="stylesheet" href="{% static 'core/css/base.css' %}" type="text/css" />
         <link rel="stylesheet" href="{% static 'core/css/vendor.css' %}" type="text/css" />
