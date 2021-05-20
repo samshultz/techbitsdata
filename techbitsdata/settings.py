@@ -56,10 +56,12 @@ INSTALLED_APPS = [
     'widget_tweaks',
     'storages',
     'admin_honeypot',
+    # "compressor",
     'django_cleanup.apps.CleanupConfig',
 ]
 
 MIDDLEWARE = [
+    "django.middleware.gzip.GZipMiddleware",
     'django.middleware.security.SecurityMiddleware',
     # 'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -68,6 +70,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'htmlmin.middleware.HtmlMinifyMiddleware',
+    'htmlmin.middleware.MarkRequestMiddleware',
 ]
 
 ROOT_URLCONF = 'techbitsdata.urls'
@@ -159,7 +163,6 @@ else:
     MEDIA_URL = '/media/'
     MEDIA_ROOT = BASE_DIR / 'media/'
 
-
 # CLOUDINARY SETTINGS
 # CLOUDINARY_STORAGE = {
 #     'CLOUD_NAME': env('CLOUDINARY_CLOUD_NAME'),
@@ -249,13 +252,19 @@ EMAIL_HOST_PASSWORD = env("EMAIL_HOST_PASSWORD")
 EMAIL_USE_TLS = False
 EMAIL_USE_SSL = False
 
-# PRODUCTION SETTINGS
-CSRF_COOKIE_SECURE = True
-SESSION_COOKIE_SECURE = True
-# SECURE_SSL_REDIRECT = True
-SECURE_BROWSER_XSS_FILTER = True
-SECURE_HSTS_SECONDS = 60
-
 ADMINS = [
     ("Sam", env('ADMIN_EMAIL'))
 ]
+
+if not DEBUG:
+    # PRODUCTION SETTINGS
+    CSRF_COOKIE_SECURE = True
+    SESSION_COOKIE_SECURE = True
+    # SECURE_SSL_REDIRECT = True
+    SECURE_BROWSER_XSS_FILTER = True
+    SECURE_HSTS_SECONDS = 60
+
+    ADMINS = [
+        ("Sam", env('ADMIN_EMAIL'))
+    ]
+
