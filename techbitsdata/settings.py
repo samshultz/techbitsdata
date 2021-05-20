@@ -26,7 +26,8 @@ DEBUG = env('DEBUG')
 ALLOWED_HOSTS = [
                 'techbitsdata.com', 
                 'techbitsdata.herokuapp.com',
-                'techbitsdata-staging.herokuapp.com', 
+                'techbitsdata-staging.herokuapp.com',
+                "www.techbitsdata.com",
                 'localhost', 
                 '127.0.0.1'
                 ]
@@ -54,6 +55,7 @@ INSTALLED_APPS = [
     'ckeditor_uploader',
     'widget_tweaks',
     'storages',
+    'admin_honeypot',
     'django_cleanup.apps.CleanupConfig',
 ]
 
@@ -246,3 +248,14 @@ EMAIL_HOST_PASSWORD = env("EMAIL_HOST_PASSWORD")
 # EMAIL_PORT = 587
 EMAIL_USE_TLS = False
 EMAIL_USE_SSL = False
+
+# PRODUCTION SETTINGS
+CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = True
+SECURE_SSL_REDIRECT = True
+SECURE_BROWSER_XSS_FILTER = True
+SECURE_HSTS_SECONDS = 60
+
+ADMINS = [
+    ("Sam", env('ADMIN_EMAIL'))
+]
