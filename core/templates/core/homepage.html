@@ -59,8 +59,8 @@
                         </div>
                         <div class="flexbox-row buttons-wrapper md-and-up">
                             <div class="flexbox-col">
-                                <div class="button"><a href="" class="cms-btn cms-btn-primary">Request A Quote</a></div>
-                            </div>
+                                <div class="button"><a href="{% url 'lets-talk' %}" class="cms-btn cms-btn-primary">Request A Quote</a></div>
+                            </div> 
                         </div>
                     </div>
                 </div>
@@ -70,7 +70,7 @@
                             {{ homepage.header_description|safe }}
                         </div>
                         <div class="buttons-wrapper">
-                            <div class="button"><a href="../lets-talk.html" class="cms-btn cms-btn-primary">Request A Quote</a></div>
+                            <div class="button"><a href="{% url 'lets-talk' %}" class="cms-btn cms-btn-primary">Request A Quote</a></div>
                         </div>
                     </div>
                 </div>
