@@ -16,7 +16,7 @@
                                             <span id="industries-cycle" data-randomize-start="true">
                                                 {% get_homepages as homepages %}
                                                 {% for page in homepages %}
-                                                    <span class="{% cycle 'color-lightblue' 'color-carnation' 'color-sun-yellow' 'color-sun-yellow' 'color-dusty-orange' 'color-sun-yellow' 'color-lightblue' 'color-brown-grey' 'color-sandy' 'color-pale-olive-green' %}" data-industry="real-estate-{{ page.slug }}">{{ page.name }}</span>
+                                                    <span class="{% cycle 'color-lightblue' 'color-carnation' 'color-sun-yellow' 'color-sun-yellow' 'color-dusty-orange' 'color-sun-yellow' 'color-lightblue' 'color-brown-grey' 'color-sandy' 'color-pale-olive-green' %}" data-industry="{{ page.slug }}-web-design">{{ page.name }}</span>
                                                 {% endfor %}
                                                 <span id="industries-cycle-last">Your Business</span>
                                             </span>
