@@ -26,7 +26,9 @@ class Service(models.Model):
     header_color = models.CharField(max_length=30, blank=True, null=True)
     
     body = RichTextField(config_name="service_editor", default="")
-
+    
+    class Meta:
+        ordering = "id",
 
 
     def __str__(self):
