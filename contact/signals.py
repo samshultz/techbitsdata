@@ -4,7 +4,7 @@ from django.db.models.signals import post_save
 from django.dispatch import receiver
 from .models import Contact, ContactInfo
 
-from django.core.mail import send_mail
+from django.core.mail import mail_admins
 
 
 @receiver(post_save, sender=Contact)
@@ -12,7 +12,7 @@ def send_contact_email(sender, instance, created, **kwargs):
 
     if created:
         
-        subject = "Please Verify Transfer"
+        subject = f"Message from {instance.contact_email}"
         from_email = os.environ.get("EMAIL_HOST_USER")
         to_email = instance.contact_email
         
@@ -23,4 +23,4 @@ def send_contact_email(sender, instance, created, **kwargs):
             message += f"I work at {instance.organization}.\n\n"
         message += f"{instance.message}"
         
-        send_mail(subject, message, from_email, [to_email])
+        mail_admins(subject, message)
